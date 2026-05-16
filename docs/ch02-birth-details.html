@@ -1,1 +1,459 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>ch02-birth-details — Pushkar Kundli</title><link rel='stylesheet' href='style.css'></head><body><main><div class='hero'><h1>Placeholder: ch02-birth-details</h1></div><p>This chapter is pending authoring. — placeholder.</p><p><a href='index.html'>← TOC</a></p></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 2 — Birth Details &amp; Panchanga | Pushkar's Kundli</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .ni-chart-figure { margin: 1.5em auto; max-width: 500px; text-align: center; }
+  .ni-chart { width: 100%; height: auto; max-width: 460px; display: block; margin: 0.6em auto; }
+  .ni-chart-title { font-size: 0.95em; color: #6b5a3a; margin-bottom: 0.4em; font-style: italic; }
+  .chart-caption { text-align: center; font-size: 0.9em; color: #6b5a3a; font-style: italic; margin-top: -0.5em; margin-bottom: 1.5em; }
+  .pd-table-wrap { margin: 1em 0; }
+  .pd-table-wrap h4 { font-size: 1em; margin: 1em 0 0.3em 0; color: #5a3d1f; border-bottom: 1px dashed #c8a96a; padding-bottom: 3px; }
+  .pd-table-wrap table { font-size: 0.88em; }
+  .pd-current { background: #fff3d4; }
+</style>
+</head>
+<body>
+<aside class="nav">
+  <div class="brand">ज्योतिष ग्रंथ</div>
+  <div class="brand-sub">A Book of Light · Pushkar's Kundli</div>
+  <h4>Front Matter</h4>
+  <a href="index.html">Table of Contents</a>
+  <h4>Part I — Foundations</h4>
+  <a href="ch01-how-to-read.html">1. How to Read This Book</a>
+  <a href="ch02-birth-details.html" class="active">2. Birth Details &amp; Panchanga</a>
+  <a href="ch02a-charts.html">2a. Reference Charts &amp; Dasha Tables</a>
+  <a href="ch03-rashis.html">3. The 12 Rashis</a>
+  <a href="ch04-nakshatras.html">4. The 27 Nakshatras</a>
+  <a href="ch05-houses.html">5. The 12 Houses</a>
+  <h4>Part II — Your Chart</h4>
+  <a href="ch06-grahas.html">6. The 9 Grahas</a>
+  <a href="ch07-cancer-lagna.html">7. Cancer Lagna</a>
+  <a href="ch08-virgo-moon.html">8. Virgo Moon</a>
+  <a href="ch09-sun-6th.html">9. Sun in 6th</a>
+  <a href="ch10-moon-3rd.html">10. Moon in 3rd</a>
+  <a href="ch11-mars-9th.html">11. Mars in 9th</a>
+  <a href="ch12-mercury-6th.html">12. Mercury in 6th</a>
+  <a href="ch13-jupiter-2nd.html">13. Jupiter in 2nd</a>
+  <a href="ch14-saturn-12th.html">14. Saturn in 12th</a>
+  <a href="ch15-house-by-house.html">15. House by House</a>
+  <h4>Part III — Yogas &amp; Doshas</h4>
+  <a href="ch16-yogas.html">16. Yogas</a>
+  <a href="ch17-doshas.html">17. Doshas</a>
+  <h4>Part IV — Time &amp; Dasha</h4>
+  <a href="ch18-vimshottari.html">18. Vimshottari System</a>
+  <a href="ch21-rahu-md.html">21. Rahu Mahadasha</a>
+  <h4>Part V — Transits</h4>
+  <a href="ch25-sade-sati.html">25. Sade Sati</a>
+  <a href="ch26-transits.html">26. Gochar</a>
+  <h4>Part VI — Life Domains</h4>
+  <a href="ch28-marriage.html">28. Marriage</a>
+  <a href="ch29-career.html">29. Career</a>
+  <a href="ch30-health.html">30. Health</a>
+  <a href="ch31-children.html">31. Children</a>
+  <a href="ch31a-life-events.html">31a. Life Events</a>
+  <h4>Part VII — Closing</h4>
+  <a href="ch32-remedies.html">32. Remedies</a>
+  <a href="ch33-glossary.html">33. Glossary</a>
+</aside>
+
+<main>
+  <div class="topbar">
+    <div class="breadcrumb">Part I · Foundations</div>
+    <div class="chapter-num">Chapter 02</div>
+  </div>
+
+  <h1>Birth Details &amp; Panchanga<span class="mr">जन्म तपशील व पंचांग</span></h1>
+
+  <p class="lede">The first thing an astrologer asks is: when, and where. Three small numbers — date, time, place — and from them the entire sky at the moment of your first breath can be reconstructed. This chapter records those numbers for Pushkar Prakash Jawale, then introduces <em>Panchanga</em>, the five-limbed Vedic calendar that turns a clock-time into a living moment. Beyond the bare five limbs, it also unpacks the <em>Avakahada Chakra</em> — the thirteen-cell signature that classical Marathi panchangas use to compress an entire birth-moment into a single readable grid.</p>
+  <p class="mr">कोणताही ज्योतिषी सर्वप्रथम तीनच प्रश्न विचारतो: <em>केव्हा? कुठे? आणि नेमका वेळ कोणता?</em> — कारण याच तीन नोंदींच्या आधारावर जन्माच्या क्षणाचे संपूर्ण आकाश गणितशास्त्राच्या मदतीने पुन्हा रचता येते. <strong>तारीख</strong> मंद-गती ग्रह कुठे होते ते सांगते (शनी एका राशीत अडीच वर्षे राहतो, तर सूर्य एका राशीत महिनाभर), <strong>वेळ</strong> सर्वात महत्त्वाची असते कारण ती लग्न (पूर्वेला उगवणारी राशी) ठरवते — आणि लग्न तर दर ४ मिनिटांत १ अंशाने बदलते. म्हणूनच जन्माची वेळ कितीही जुनी असली तरी ती अचूक नोंदलेली असणे आवश्यक. <strong>स्थळ</strong>सुद्धा महत्त्वाचे — कल्याण-अंबरनाथ परिसर आणि नागपूर या दोन ठिकाणी एकाच मिनिटी जन्मलेल्या दोन बाळांची लग्ने थोडी वेगळी असतात कारण आकाश हे स्थानिक असते. हा अध्याय पुष्करच्या जन्माच्या या तीन नोंदी अचूक मांडतो आणि नंतर <em>पंचांग</em> — वैदिक कालगणनेची पाच अंगे (तिथी, वार, नक्षत्र, योग, करण) — समजावून सांगतो. पंचांग म्हणजे फक्त "हिंदू कॅलेंडर" नाही; तो जन्माच्या क्षणाचा "गुणवत्तेचा अहवाल" आहे — कोणत्या प्रकारची हवा होती, कोणती ऊर्जा वाहत होती, कोणत्या ग्रहांचे संगीत वाजत होते — हे सांगणारा. शेवटी <em>अवकहडा चक्र</em> — महाराष्ट्रीय पंचांगांत वापरली जाणारी १३ कोष्टकांची एकत्रित ओळख-तालिका — सुद्धा या अध्यायात उलगडली आहे.</p>
+
+  <h2>2.1 The Three Numbers<span class="mr">तीन नोंदी</span></h2>
+
+  <table>
+    <tr><th>Item</th><th>Value</th><th>मराठी</th></tr>
+    <tr><td>Name</td><td>Pushkar Prakash Jawale</td><td>पुष्कर प्रकाश जवळे</td></tr>
+    <tr><td>Date of Birth</td><td>17 December 2003 (Wednesday)</td><td>१७ डिसेंबर २००३ (बुधवार)</td></tr>
+    <tr><td>Time of Birth</td><td>21:43 (9:43 PM)</td><td>रात्री ९:४३</td></tr>
+    <tr><td>Place of Birth</td><td>Maharashtra, India — PIN 421301 (Kalyan / Ambernath / Ulhasnagar corridor)</td><td>महाराष्ट्र, भारत — पिन ४२१३०१ (कल्याण / अंबरनाथ / उल्हासनगर परिसर)</td></tr>
+    <tr><td>Latitude</td><td>19° 13′ 36″ N</td><td>१९° १३′ ३६″ उत्तर</td></tr>
+    <tr><td>Longitude</td><td>73° 06′ 20″ E</td><td>७३° ०६′ २०″ पूर्व</td></tr>
+    <tr><td>Time Zone</td><td>IST (+5:30) — base meridian 82°30′ E</td><td>IST (+५:३०) — आधार रेखांश ८२°३०' पूर्व</td></tr>
+    <tr><td>Local Mean Time</td><td>21:05:25</td><td>स्थानिक माध्य काळ २१:०५:२५</td></tr>
+    <tr><td>Sidereal Time</td><td>02:48:56</td><td>नाक्षत्र काळ ०२:४८:५६</td></tr>
+    <tr><td>Sunrise / Sunset</td><td>07:04:21 / 18:02:41</td><td>सूर्योदय ०७:०४:२१ / सूर्यास्त १८:०२:४१</td></tr>
+    <tr><td>Day Duration</td><td>10:58:21</td><td>दिनमान १०:५८:२१</td></tr>
+    <tr><td>Ayan · Gola · Ritu</td><td>Dakshinayan · Dakshin gola · Hemant ritu</td><td>दक्षिणायन · दक्षिण गोल · हेमंत ऋतू</td></tr>
+    <tr><td>Ayanamsa</td><td>Lahiri (Chitra Paksha) ≈ 23° 54′ 31″</td><td>लाहिरी अयनांश २३° ५४' ३१"</td></tr>
+  </table>
+
+  <h3>Your D-1 (Rashi) and Chandra Kundli — the chart this book studies<span class="mr">तुमची D-१ (राशि) व चंद्र कुंडली — या पुस्तकाने अभ्यासलेली कुंडली</span></h3>
+
+  <p>From the inputs above (date, time, place, latitude, longitude, time zone, ayanamsa), the entire natal sky can be reconstructed. Below are the two charts every reading depends on: the <strong>D-1 Lagna kundli</strong> (where each planet sits in your natal sky, with the rising sign at the 1st-house position) and the <strong>Chandra kundli</strong> (the same planets re-counted from the Moon — used heavily in classical reading because Moon represents mind, emotion, and the mother's view of the native). The charts are rendered in <em>North-Indian diamond style</em> — the familiar Maharashtra-region layout where houses are fixed in position and signs rotate with the lagna.</p>
+  <p class="mr">वरील इनपुटांवरून (तारीख, वेळ, स्थळ, अक्षांश, रेखांश, कालक्षेत्र, अयनांश) संपूर्ण जन्म-आकाश पुन्हा रचता येते. खाली प्रत्येक वाचनासाठी अनिवार्य असलेल्या दोन कुंडल्या आहेत: <strong>D-१ लग्न कुंडली</strong> (तुमच्या जन्म-आकाशात प्रत्येक ग्रह कुठे आहे, १ल्या-भाव-स्थानी उगवती राशी) आणि <strong>चंद्र कुंडली</strong> (तेच ग्रह चंद्रापासून पुन्हा मोजलेले — शास्त्रीय वाचनात अत्यंत सखोल वापरली जाते कारण चंद्र मन, भावना, आणि आईच्या नजरेतून जातकाचे चित्र दर्शवतो). कुंडल्या <em>उत्तर-भारतीय हिऱ्याच्या शैलीत</em> — महाराष्ट्रात परिचित मांडणी जिथे भाव ठरलेल्या जागी असतात आणि राशी लग्नानुसार फिरतात.</p>
+
+  <figure class="ni-chart-figure">
+    <figcaption class="ni-chart-title"><strong>D-1 Rashi (Lagna) Kundli / जन्म कुंडली · लग्न कुंडली</strong> — 17 Dec 2003, 21:43, Maharashtra · Lagna: Cancer (कर्क)</figcaption>
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="ni-chart" role="img" aria-label="D1 Rashi Lagna Kundli — North Indian Diamond">
+      <rect x="2" y="2" width="396" height="396" fill="#faf6e8" stroke="#8a6f3d" stroke-width="3"/>
+      <line x1="2" y1="2" x2="398" y2="398" stroke="#8a6f3d" stroke-width="2"/>
+      <line x1="398" y1="2" x2="2" y2="398" stroke="#8a6f3d" stroke-width="2"/>
+      <polygon points="200,2 398,200 200,398 2,200" fill="none" stroke="#8a6f3d" stroke-width="2"/>
+
+      <text x="200" y="78" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">4</text>
+      <text x="200" y="98" text-anchor="middle" font-size="10" font-weight="bold" fill="#c0392b">लग्न · LAGNA</text>
+      <text x="200" y="112" text-anchor="middle" font-size="9" fill="#8a6f3d">कर्क · Cancer</text>
+
+      <text x="100" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">5</text>
+      <text x="100" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">गु · Ju</text>
+      <text x="100" y="64" text-anchor="middle" font-size="9" fill="#5a3d1f">सिंह · Leo</text>
+
+      <text x="30" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">6</text>
+      <text x="62" y="118" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">च · Mo</text>
+      <text x="62" y="132" text-anchor="middle" font-size="9" fill="#5a3d1f">कन्या · Virgo</text>
+
+      <text x="100" y="192" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">7</text>
+      <text x="100" y="214" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">के · Ke</text>
+      <text x="100" y="228" text-anchor="middle" font-size="9" fill="#5a3d1f">तूळ · Libra</text>
+
+      <text x="30" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">8</text>
+      <text x="62" y="318" text-anchor="middle" font-size="9" fill="#8a6f3d">वृश्चिक · Sco</text>
+
+      <text x="100" y="372" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">9</text>
+      <text x="100" y="350" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">र · बु</text>
+      <text x="100" y="388" text-anchor="middle" font-size="9" fill="#5a3d1f">Su·Me · धनू · Sag</text>
+
+      <text x="200" y="298" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">10</text>
+      <text x="200" y="270" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">शु · Ve</text>
+      <text x="200" y="320" text-anchor="middle" font-size="9" fill="#8a6f3d">मकर · Cap</text>
+
+      <text x="300" y="372" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">11</text>
+      <text x="300" y="388" text-anchor="middle" font-size="9" fill="#8a6f3d">कुंभ · Aqu</text>
+
+      <text x="370" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">12</text>
+      <text x="338" y="318" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">मं · Ma</text>
+      <text x="338" y="282" text-anchor="middle" font-size="9" fill="#5a3d1f">मीन · Pis</text>
+
+      <text x="300" y="192" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">1</text>
+      <text x="300" y="214" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">रा · Ra</text>
+      <text x="300" y="228" text-anchor="middle" font-size="9" fill="#5a3d1f">मेष · Ari</text>
+
+      <text x="370" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">2</text>
+      <text x="338" y="118" text-anchor="middle" font-size="9" fill="#8a6f3d">वृषभ · Tau</text>
+
+      <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">3</text>
+      <text x="300" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">श · Sa</text>
+      <text x="300" y="64" text-anchor="middle" font-size="9" fill="#5a3d1f">मिथुन · Gem</text>
+    </svg>
+  </figure>
+  <p class="chart-caption">Large number in each house = sign number (1 Aries → 12 Pisces) as it sits in Pushkar's sky. Red Devanagari + Latin = planets in that house. Cancer rises at the apex (4 = Cancer-number on the zodiac). / प्रत्येक भावात मोठा अंक = राशी-क्रमांक (१ मेष → १२ मीन). लाल देवनागरी + इंग्रजी = त्या भावातील ग्रह.</p>
+
+  <figure class="ni-chart-figure">
+    <figcaption class="ni-chart-title"><strong>Chandra Kundli / चंद्र कुंडली</strong> — Moon (Virgo / कन्या) as the 1st house. Same planets, houses re-counted from Moon.</figcaption>
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="ni-chart" role="img" aria-label="Chandra Kundli — North Indian Diamond, Moon as 1st house">
+      <rect x="2" y="2" width="396" height="396" fill="#faf6e8" stroke="#8a6f3d" stroke-width="3"/>
+      <line x1="2" y1="2" x2="398" y2="398" stroke="#8a6f3d" stroke-width="2"/>
+      <line x1="398" y1="2" x2="2" y2="398" stroke="#8a6f3d" stroke-width="2"/>
+      <polygon points="200,2 398,200 200,398 2,200" fill="none" stroke="#8a6f3d" stroke-width="2"/>
+
+      <text x="200" y="78" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">6</text>
+      <text x="200" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">च · Mo · CHANDRA</text>
+      <text x="200" y="112" text-anchor="middle" font-size="9" fill="#8a6f3d">कन्या · Virgo</text>
+
+      <text x="100" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">7</text>
+      <text x="100" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">के · Ke</text>
+      <text x="100" y="64" text-anchor="middle" font-size="9" fill="#5a3d1f">तूळ · Libra</text>
+
+      <text x="30" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">8</text>
+      <text x="62" y="118" text-anchor="middle" font-size="9" fill="#8a6f3d">वृश्चिक · Sco</text>
+
+      <text x="100" y="192" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">9</text>
+      <text x="100" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">र · बु</text>
+      <text x="100" y="218" text-anchor="middle" font-size="9" fill="#5a3d1f">Su·Me · धनू · Sag</text>
+
+      <text x="30" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">10</text>
+      <text x="62" y="318" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">शु · Ve</text>
+      <text x="62" y="332" text-anchor="middle" font-size="9" fill="#5a3d1f">मकर · Cap</text>
+
+      <text x="100" y="372" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">11</text>
+      <text x="100" y="388" text-anchor="middle" font-size="9" fill="#8a6f3d">कुंभ · Aqu</text>
+
+      <text x="200" y="298" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">12</text>
+      <text x="200" y="270" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">मं · Ma</text>
+      <text x="200" y="320" text-anchor="middle" font-size="9" fill="#8a6f3d">मीन · Pis</text>
+
+      <text x="300" y="372" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">1</text>
+      <text x="300" y="350" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">रा · Ra</text>
+      <text x="300" y="388" text-anchor="middle" font-size="9" fill="#5a3d1f">मेष · Aries</text>
+
+      <text x="370" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">2</text>
+      <text x="338" y="318" text-anchor="middle" font-size="9" fill="#8a6f3d">वृषभ · Tau</text>
+
+      <text x="300" y="192" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">3</text>
+      <text x="300" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">श · Sa</text>
+      <text x="300" y="218" text-anchor="middle" font-size="9" fill="#5a3d1f">मिथुन · Gem</text>
+
+      <text x="370" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">4</text>
+      <text x="338" y="118" text-anchor="middle" font-size="9" fill="#8a6f3d">कर्क · Cancer</text>
+
+      <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">5</text>
+      <text x="300" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">गु · Ju</text>
+      <text x="300" y="64" text-anchor="middle" font-size="9" fill="#5a3d1f">सिंह · Leo</text>
+    </svg>
+  </figure>
+  <p class="chart-caption">House numbers re-counted <em>from Moon</em>: Virgo=1H, Libra=2H, Scorpio=3H, Sagittarius=4H, etc. Planet positions unchanged from D-1 — only the house labels rotate. / भाव <em>चंद्रापासून</em> पुनर्मोजले: कन्या=१, तूळ=२, वृश्चिक=३, धनू=४, इ.</p>
+
+  <h3>Planet-Sign-House-Dignity at a glance<span class="mr">ग्रह-राशि-भाव-बल — एका दृष्टीत</span></h3>
+  <p>The chart's nine grahas, each with sign, house, nakshatra, dignity, and lordship for Cancer Lagna. Bookmark this table — every later chapter refers back to it.</p>
+  <p class="mr">कुंडलीतले नऊ ग्रह, प्रत्येकाची राशी, भाव, नक्षत्र, बल आणि कर्क लग्नासाठी स्वामित्व. हा तक्ता जपून ठेवा — पुस्तकातला प्रत्येक पुढचा अध्याय याकडे परत येतो.</p>
+  <table>
+    <tr><th>Planet / ग्रह</th><th>Sign / राशी</th><th>Deg / अंश</th><th>House / भाव</th><th>Nakshatra · Pada / नक्षत्र · पाद</th><th>Dignity / बल</th><th>Lordship for Cancer / कर्क लग्नासाठी स्वामित्व</th></tr>
+    <tr><td>Sun / सूर्य (Su)</td><td>Sagittarius / धनू</td><td>01°23′16″</td><td>6H / ६वा</td><td>Moola · 1 / मूळ · १</td><td>Friend's sign / मित्र-राशी</td><td>2L — primary maraka / २-स्वामी — प्राथमिक मारक</td></tr>
+    <tr><td>Moon / चंद्र (Mo)</td><td>Virgo / कन्या</td><td>13°10′12″</td><td>3H / ३रा</td><td>Hasta · 1 / हस्त · १</td><td>Friend's sign / मित्र-राशी</td><td>1L — Lagna lord / १-स्वामी — लग्न-स्वामी</td></tr>
+    <tr><td>Mars / मंगळ (Ma)</td><td>Pisces / मीन</td><td>06°44′20″</td><td>9H / ९वा</td><td>U. Bhadrapada · 2 / उत्तरा भाद्रपदा · २</td><td>Friend's sign / मित्र-राशी</td><td>5L + 10L — <strong>yogakaraka</strong> / ५ + १० — <strong>योगकारक</strong></td></tr>
+    <tr><td>Mercury / बुध (Me) R</td><td>Sagittarius / धनू</td><td>18°39′14″</td><td>6H / ६वा</td><td>P. Ashada · 2 / पूर्वा आषाढा · २</td><td>Neutral · Retrograde / सम · वक्री</td><td>3L + 12L</td></tr>
+    <tr><td>Jupiter / गुरु (Ju)</td><td>Leo / सिंह</td><td>01°38′54″</td><td>2H / २रा</td><td>P. Phalguni · 4 / पूर्वा फाल्गुनी · ४</td><td>Friend's sign / मित्र-राशी</td><td>6L + 9L — <strong>Atmakaraka</strong> / आत्मकारक</td></tr>
+    <tr><td>Venus / शुक्र (Ve)</td><td>Capricorn / मकर</td><td>17°00′14″</td><td>7H / ७वा</td><td>U. Ashada · 4 / उत्तरा आषाढा · ४</td><td>Friend's sign / मित्र-राशी</td><td>4L + 11L</td></tr>
+    <tr><td>Saturn / शनी (Sa) R</td><td>Gemini / मिथुन</td><td>17°00′14″</td><td>12H / १२वा</td><td>Ardra · 4 / आर्द्रा · ४</td><td>Friend · Retrograde / मित्र · वक्री</td><td>7L + 8L — <strong>double maraka</strong> / ७ + ८ — दुहेरी मारक</td></tr>
+    <tr><td>Rahu / राहू (Ra) R</td><td>Aries / मेष</td><td>24°33′06″</td><td>10H / १०वा</td><td>Bharani · 4 / भरणी · ४</td><td>Enemy sign / शत्रू-राशी</td><td>Shadow / छाया-ग्रह</td></tr>
+    <tr><td>Ketu / केतू (Ke) R</td><td>Libra / तूळ</td><td>24°33′06″</td><td>4H / ४था</td><td>Vishakha · 4 / विशाखा · ४</td><td>Friend / मित्र</td><td>Shadow / छाया-ग्रह</td></tr>
+  </table>
+
+  <div class="callout green">
+    <div class="label">Where to find the rest / उर्वरित कुठे आहे</div>
+    <p>The full <strong>Vimshottari Mahadasha master table</strong>, <strong>per-MD Antardasha breakdowns</strong>, <strong>Pratyantardasha (PD) tables for the current Rahu MD</strong>, <strong>Sade Sati cycle table</strong>, and <strong>glyph/sign legends</strong> are all kept in the dedicated reference deck: <a href="ch02a-charts.html"><strong>Chapter 2a — Reference Charts &amp; Dasha Tables</strong></a>. That page exists precisely so this chapter doesn't get buried under reference matter. Open ch02a in a second tab and use it as your verification companion throughout the book — every later chapter that mentions a placement, dasha, or PD can be cross-checked there in seconds.</p>
+    <p class="mr">संपूर्ण <strong>विमशोत्तरी महादशा मुख्य तक्ता</strong>, <strong>प्रत्येक महादशेतील अंतर्दशा-तपशील</strong>, <strong>सध्याच्या राहू महादशेतल्या प्रत्यंतर्दशा (PD) तक्ते</strong>, <strong>साडेसाती चक्र तक्ता</strong>, आणि <strong>चिन्ह/राशि सूची</strong> हे सर्व समर्पित संदर्भ-डेकमध्ये आहेत: <a href="ch02a-charts.html"><strong>अध्याय २अ — संदर्भ कुंडली व दशा-तक्ते</strong></a>. हे पान या अध्यायाला संदर्भ-सामग्रीखाली बुडू नये म्हणून बनवले. ch02a दुसर्‍या टॅबमध्ये उघडा आणि पुस्तकभर पडताळणी-साथीदार म्हणून वापरा.</p>
+  </div>
+
+  <h3>Why each number matters<span class="mr">प्रत्येक नोंदीचे महत्त्व</span></h3>
+
+  <p><strong>Date</strong> determines the position of the slow planets — Sun, Saturn, Jupiter, Rahu, Ketu — within a day or two of accuracy. <strong>Time</strong> is more critical: it determines the Lagna (rising sign), which moves through all twelve signs every 24 hours. A four-minute error in birth time can shift the lagna by one degree; an error of two hours can change the lagna entirely. <strong>Place</strong> matters because the same moment in Tokyo and in Mumbai produces different rising signs — the sky a person sees overhead is local. For Pushkar, born late evening at 21:43 IST in the Kalyan-Ambernath corridor, the slow grahas had been broadly fixed for weeks (Saturn deep into its Gemini retrograde, Jupiter early in Leo, Rahu-Ketu on the Aries-Libra axis), while the fast-moving Lagna had just rotated Cancer up to nearly 22° on the eastern horizon — moments away from Leo rising.</p>
+  <p class="mr"><strong>तारीख</strong> — १७ डिसेंबर २००३ — यावरून मंद ग्रहांची स्थिती एक-दोन दिवसांच्या अचूकतेने ठरते. म्हणजे शनी मिथुनात वक्री, गुरू सिंहाच्या सुरुवातीला, राहू-केतू मेष-तूळ अक्षावर, सूर्य धनूत १° वर — हे सर्व तारखेवरून निश्चित होते. <strong>वेळ</strong> — रात्री ९:४३ — ही सर्वात नाजूक नोंद आहे, कारण यावरून <em>लग्न</em> ठरते. लग्न दर ४ मिनिटांत एक अंश पुढे जाते आणि दर सुमारे २ तासांनी पूर्ण राशी बदलते. म्हणजेच तुम्ही जर रात्री ८:४० च्या आसपास जन्मला असता तर लग्न मिथुन असू शकले असते, ९:४३ ला कर्क लग्न (२१°३९' वर) आले, आणि १०:३० पर्यंत थांबला असता तर सिंह लग्न आले असते. <strong>स्थळ</strong> — कल्याण-अंबरनाथ परिसर (अक्षांश १९°१४' उत्तर, रेखांश ७३°०६' पूर्व) — हे ठरवते की आकाश तुम्हाला कोणत्या कोनातून दिसले. टोक्यो आणि मुंबई या दोन्ही ठिकाणी एकाच क्षणी जन्मलेल्या मुलांच्या कुंडल्या पूर्णपणे वेगळ्या असतात कारण पूर्व क्षितिजावर त्या दोन्ही ठिकाणी वेगळी राशी उगवत असते. म्हणूनच जन्मस्थळ हे केवळ शहर नव्हे, अक्षांश-रेखांशापर्यंत अचूक असावे लागते.</p>
+
+  <div class="callout">
+    <div class="label">A small but important note on time / वेळेबद्दल एक नोंद</div>
+    <p>Your birth time, 21:43 on Wednesday 17 December 2003, is comfortably past sunset (sunset that day was 18:02:41) but well before midnight — so the Vedic vaar reading is unambiguous: <strong>Budhwar (Wednesday)</strong>, ruled by Mercury. Mercury also happens to be the lord of your Moon-sign (Virgo). The day-lord and the rasi-lord pulse together under <strong>Mercury</strong>, which biases the early life toward intellect, language, fine motor skill, and signal-processing temperament. We will see Mercury's fingerprints throughout — Sun-Mercury together in the 6th, Mercury-Sun parivartana with Jupiter, the Hasta nakshatra hand-skill signature.</p>
+    <p class="mr">तुमच्या जन्माचा वेळ रात्री ९:४३ — सूर्यास्तानंतर (सूर्यास्त त्या दिवशी ६:०२) आणि मध्यरात्रीच्या आत. म्हणून वैदिक वार स्पष्ट: <strong>बुधवार</strong>, स्वामी बुध. योगायोग म्हणजे तुमच्या चंद्र-राशी (कन्या) चा स्वामी सुद्धा बुधच. वार-स्वामी आणि राशी-स्वामी — दोन्ही ठिकाणी बुध — यामुळे बालपणापासूनच बुद्धी, भाषा, हात-कौशल्य, संकेत-प्रक्रिया यांकडे झुकाव. ही बुध-स्वाक्षरी पुढच्या अध्यायांत वारंवार दिसेल — सूर्य-बुध सहावात, सूर्य-गुरू परिवर्तन योग, हस्त नक्षत्राची हाताळणी-कुशलता.</p>
+  </div>
+
+  <div class="callout gold">
+    <div class="label">Learning Note — Birth-time rectification: why precision matters / शिकण्याची नोंद — जन्मवेळ-शुद्धीकरण: अचूकता का</div>
+    <p><strong>Rule:</strong> The Lagna moves through 360° in 24 hours — that is 1° every 4 minutes. So a 4-minute error in birth time shifts the Lagna by 1°. A 30-minute error shifts it 7-8°, often enough to push the Lagna into the previous or next nakshatra-pada, which changes the Navamsa Lagna entirely. A 2-hour error usually moves the Lagna into a different sign, which rewrites the entire chart from scratch. <em>Time is the single most fragile input.</em> Date is forgiving; place is forgiving (within a city); time is not.</p>
+    <p><strong>Applied to this chart:</strong> Pushkar's recorded birth time is 21:43 on 17 December 2003. At this moment the Lagna sits at 21°39′53″ Cancer — already deep into Aslesha nakshatra (Pada 2). If the actual birth time were 21:37 (six minutes earlier), the Lagna would be ~20°10′ Cancer — still Aslesha but on Pada 1; the D-9 Navamsa Lagna would shift from Scorpio to Libra and the whole marriage reading changes flavour. If birth were 21:49 (six minutes later), Lagna would be ~23°10′ Cancer — still Aslesha Pada 3, but inching closer to the Cancer-Leo sign cusp that arrives around 22:05. Within plus-or-minus ten minutes the chart is essentially stable; beyond that the Aslesha-Magha boundary becomes a real risk.</p>
+    <p><strong>How to rectify a birth time you are uncertain about:</strong> (1) Collect 3-5 verifiable life events with known dates — school graduation, first job, first relationship, parent's milestone, foreign travel, major illness. Check which Vimshottari sub-period (AD or PD) activated when. The rectified time is the one whose dasha-windows match the actual events. (2) Ask the mother or hospital records — Indian birth certificates often round to the nearest 5-15 minutes, so the recorded value may be ±5 minutes. (3) Cross-check via a Lagna-rising calculator — if uncertain by ±5 minutes, the Lagna degree is usually still correct; if uncertain by ±15 minutes, run two charts and see which reads truer against past events.</p>
+    <p><strong>Alternative readings:</strong> If birth time is uncertain by more than ±30 minutes, do not trust the chart for fine timing — use only the Mahadasha and Antardasha readings, where larger time-windows tolerate minor Lagna shifts. If uncertain by more than ±2 hours, the entire Lagna is suspect — start over with rectification, do not predict from the chart until the time is anchored. A serious consultant always asks the client: "how confident are you in your birth time, on a scale of 1-10?" The answer determines the depth at which they can read.</p>
+    <p class="mr"><strong>नियम:</strong> लग्न २४ तासांत ३६०° फिरते — म्हणजे दर ४ मिनिटांत १°. म्हणून जन्मवेळेत ४-मिनिटांची चूक झाली तर लग्न १° ने सरकते. ३० मिनिटांची चूक लग्न ७-८° सरकवते, जे अनेकदा मागच्या किंवा पुढच्या नक्षत्र-पादात लग्न ढकलण्यासाठी पुरेसे आहे, ज्यामुळे नवमांश-लग्न पूर्णपणे बदलते. २-तासांची चूक सहसा लग्नाला वेगळ्या राशीत नेते. <em>वेळ हे सर्वात नाजूक इनपुट.</em></p>
+    <p class="mr"><strong>या कुंडलीला लागू:</strong> पुष्करचा नोंदलेला जन्मवेळ २१:४३, १७ डिसेंबर २००३. या क्षणी लग्न-अंश कर्कात २१°३९'५३" येतो — आश्लेषा नक्षत्राच्या २ऱ्या पादात. प्रत्यक्ष जन्म २१:३७ (सहा मिनिटे आधी) असेल तर लग्न ~२०°१०' कर्क — आश्लेषा पाद १; नवमांश-लग्न वृश्चिकाऐवजी तूळमध्ये जाते, विवाह-वाचनाची चव बदलते. जन्म २१:४९ (सहा मिनिटे नंतर) असेल तर लग्न ~२३°१०' — आश्लेषा पाद ३, पण २२:०५ च्या आसपासच्या कर्क-सिंह सीमेकडे झुकलेले. ±१० मिनिटांत कुंडली स्थिर; त्यापलीकडे आश्लेषा-मघा सीमेचा खरा धोका.</p>
+    <p class="mr"><strong>अनिश्चित जन्मवेळेची शुद्धी कशी करावी:</strong> (१) ज्ञात तारखांच्या ३-५ पडताळणीयोग्य जीवन-घटना गोळा करा — शाळेची पदवी, पहिली नोकरी, मोठी आजार, पालकांच्या घटना, परदेश-प्रवास. कोणत्या विमशोत्तरी उप-कक्षाने त्या सक्रिय केल्या ते तपासा. शुद्धीकृत वेळ तीच ज्याच्या दशा-खिडक्या प्रत्यक्ष घटनांशी जुळतात. (२) आईला किंवा रुग्णालयाच्या नोंदी विचारा — जन्म-प्रमाणपत्रे सहसा ५-१५ मिनिटांत असतात. (३) लग्न-उगवण-गणकाने नोंदलेल्या मूल्याशी क्रॉस-चेक करा.</p>
+    <p class="mr"><strong>पर्यायी वाचन:</strong> जन्मवेळ ±३० मिनिटांपेक्षा जास्त अनिश्चित असेल तर सूक्ष्म वेळेसाठी कुंडलीवर विश्वास ठेवू नका — फक्त महादशा व अंतर्दशा वाचन वापरा. ±२ तासांपेक्षा जास्त अनिश्चित असेल तर संपूर्ण लग्न संशयास्पद — शुद्धीकरणाने पुन्हा सुरू करा. गंभीर सल्लागार नेहमी जातकाला विचारतो: "तुमच्या जन्मवेळेवर तुमचा विश्वास १-१० मधल्या किती गुणांचा?"</p>
+  </div>
+
+  <h2>2.2 Why Maharashtra · Kalyan-Ambernath Specifically<span class="mr">कल्याण-अंबरनाथ परिसर का महत्त्वाचे</span></h2>
+
+  <p>PIN 421301 sits in the Kalyan-Ambernath-Ulhasnagar corridor of Thane district, on the older industrial-suburban belt north-east of Mumbai. Its latitude (19°13′ N) places it just inside the tropics, about 250 km south of Savda and almost two full degrees of latitude lower than the Tapi-river belt. Lower latitude means the Sun and Moon trace flatter arcs across the sky; rising-times for the slower signs (Cancer, Capricorn) shorten slightly compared with higher latitudes. At your birth-moment Cancer had already been rising for the better part of two hours and was about twenty minutes from giving way to Leo. The lagna degree of 21°39′ Cancer therefore catches Cancer late in its ascent — close enough to the Leo cusp that the temperament inherits a touch of Leo's outward warmth on top of Cancer's protective inwardness. Geographically, Kalyan-Ambernath is also a rail-and-highway junction: Pushkar's birth-sky was the sky over a node-of-movement, not over a quiet village. That subtle thing — the genius loci of a transit-corridor — quietly reinforces a Mercury-flavoured early life of motion, learning, and information.</p>
+  <p class="mr">पिन ४२१३०१ हा ठाणे जिल्ह्यातील कल्याण-अंबरनाथ-उल्हासनगर पट्ट्यातला — मुंबईच्या ईशान्येला असलेला जुना औद्योगिक-उपनगरी प्रदेश. अक्षांश १९°१३' उत्तर म्हणजे उष्णकटिबंधाच्या आत — सावद्यापेक्षा साधारण २५० किमी दक्षिणेला आणि जवळजवळ दोन पूर्ण अंशांनी कमी अक्षांश. कमी अक्षांशामुळे सूर्य-चंद्राच्या आकाश-कमानी अधिक सपाट; मंद उगवणाऱ्या राशींची (कर्क, मकर) उगवण-वेळ थोडी कमी होते. तुमच्या जन्म-क्षणी कर्क राशी जवळ-जवळ दोन तास उगवत होती आणि सिंहाला जागा देण्यासाठी फक्त वीस मिनिटे शिल्लक होती. लग्न-अंश २१°३९' कर्क — म्हणजे कर्क उगवणीच्या अगदी शेवटच्या टप्प्यात; सिंह-सीमेला इतकं जवळ की स्वभावात कर्काच्या रक्षक-अंतर्मुखतेवर सिंहाची बाहेर-डोकावणारी ऊब हलकीशी मिसळते. भौगोलिकदृष्ट्या कल्याण-अंबरनाथ हा रेल्वे-महामार्ग जंक्शन — पुष्करचे जन्म-आकाश एका शांत खेड्यावर नव्हे, तर एका वाहतूक-नोडवर होते. हे सूक्ष्म स्थळ-तेज (genius loci) गती, शिक्षण, माहिती यांना अनुकूल बुध-छटा सुरुवातीच्या आयुष्यात रुजवते.</p>
+
+  <h2>2.3 What is Panchanga?<span class="mr">पंचांग म्हणजे काय?</span></h2>
+
+  <p><strong>Panchanga</strong> means "five limbs" — <em>pancha</em> (five) + <em>anga</em> (limb). It is the traditional Hindu calendar system, but more than a calendar — it is a description of the spiritual <em>quality</em> of a moment. Five elements together describe what kind of day, hour, and minute you were born into.</p>
+  <p class="mr"><strong>पंचांग</strong> या शब्दात दोन भाग आहेत — <em>पंच</em> म्हणजे पाच, आणि <em>अंग</em> म्हणजे शरीराचे भाग. म्हणजे "पाच अंगांचा एक तपशील." पंचांग हा पारंपरिक हिंदू कॅलेंडरचा भाग असला तरी तो फक्त "आज कोणती तारीख, कोणता दिवस" एवढेच सांगत नाही — तो जन्माच्या क्षणाची <strong>आध्यात्मिक गुणवत्ता</strong> वर्णन करतो. कोणत्याही क्षणाला आकाशात पाच गोष्टी एकत्रच चालू असतात: कोणती <em>तिथी</em> चालू आहे (चंद्र-दिवस), कोणता <em>वार</em> आहे (आठवड्याचा दिवस), चंद्र कोणत्या <em>नक्षत्रा</em>त आहे, सूर्य-चंद्र-रेखांशाच्या बेरजेवरून कोणता <em>योग</em> बनतो, आणि कोणते <em>करण</em> चालू आहे. ही पाच अंगे एकत्र मिळून त्या क्षणाची "स्वभाव-गुणवत्ता" तयार होते — उदा. एखादा क्षण उत्साही असेल, एखादा शांत, एखादा तीव्र, एखादा प्रवासाला योग्य, एखादा निर्णयाला अयोग्य. म्हणजेच पंचांग म्हणजे "हवामान-अहवाल" आहे — फक्त वेळेच्या नव्हे, तर त्या वेळेच्या आध्यात्मिक हवामानाचा.</p>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h4>1. Tithi · तिथी</h4>
+      <p>The lunar day. Based on the angular distance between Sun and Moon. There are 30 tithis in a lunar month — 15 of the waxing fortnight (Shukla Paksha) and 15 of the waning fortnight (Krishna Paksha).</p>
+      <p class="mr">चंद्र-दिवस. सूर्य-चंद्रातील कोनीय अंतरावर आधारित. एका चांद्रमासात ३० तिथी.</p>
+    </div>
+    <div class="card">
+      <h4>2. Vara · वार</h4>
+      <p>The weekday. Each of the seven days is ruled by a planet: Sunday-Sun, Monday-Moon, Tuesday-Mars, Wednesday-Mercury, Thursday-Jupiter, Friday-Venus, Saturday-Saturn.</p>
+      <p class="mr">आठवड्याचा वार. प्रत्येक वाराचा एक ग्रह स्वामी.</p>
+    </div>
+    <div class="card">
+      <h4>3. Nakshatra · नक्षत्र</h4>
+      <p>The lunar mansion the Moon occupies at birth. There are 27 nakshatras, each a slice of about 13°20′ along the zodiac.</p>
+      <p class="mr">जन्मवेळी चंद्र असलेले नक्षत्र. एकूण २७.</p>
+    </div>
+    <div class="card">
+      <h4>4. Yoga · योग</h4>
+      <p>(Different from "yoga" meaning planetary combination.) A specific calculation based on the sum of Sun and Moon longitudes. There are 27 yogas, with names like Vishkambha, Priti, Ayushman, Saubhagya, Shobhana — each carrying a quality.</p>
+      <p class="mr">सूर्य-चंद्र रेखांशांच्या बेरजेवर आधारित. २७ योग.</p>
+    </div>
+    <div class="card">
+      <h4>5. Karana · करण</h4>
+      <p>Half a tithi. Each tithi is split into two karanas. There are 11 karanas in total — 7 movable, 4 fixed. Used in muhurta (electional astrology) more than natal.</p>
+      <p class="mr">अर्ध तिथी. ११ करण.</p>
+    </div>
+    <div class="card">
+      <h4>And then some<br>...आणि बरेच काही</h4>
+      <p>Beyond the five limbs, classical Panchangas note Rahukala, Yamaganda, Gulika, Hora, Choghadiya — minor sub-divisions of the day used for muhurta. We will not go into all; the five limbs are enough for our purpose.</p>
+      <p class="mr">पाच अंगांशिवाय राहूकाळ, यमगंड, गुलिक, होरा, चौघडिया हे उपविभाग असतात — मुख्यतः मुहूर्तासाठी.</p>
+    </div>
+  </div>
+
+  <div class="callout gold">
+    <div class="label">Learning Note — Read any panchanga in 60 seconds: a 5-question shortcut / शिकण्याची नोंद — कोणताही पंचांग ६० सेकंदांत वाचा</div>
+    <p><strong>Rule:</strong> A panchanga's five limbs combine to describe the energetic quality of a moment. For natal interpretation, asking five quick questions in sequence yields a usable portrait without deep classical study.</p>
+    <p><strong>The five questions:</strong></p>
+    <ol>
+      <li><strong>Tithi → what does the Moon-Sun relationship say about appetite?</strong> Waxing Moon (Shukla Paksha) = outward energy, performative, growing. Waning Moon (Krishna Paksha) = inward energy, reflective, simplifying. Specific tithi number (1-15) refines further — Navami = devotional courage, Ekadashi = renunciation-flavour, Ashtami = sharp choice, Purnima/Amavasya = peak intensity.</li>
+      <li><strong>Vara → what is the day-lord's energy?</strong> Sunday (Sun) = authority/father, Monday (Moon) = mother/intuition, Tuesday (Mars) = action/courage, Wednesday (Mercury) = intellect/communication, Thursday (Jupiter) = wisdom/optimism, Friday (Venus) = love/beauty, Saturday (Saturn) = discipline/restriction. The day-lord pulses through the native's life forever.</li>
+      <li><strong>Nakshatra → what is the deeper psychological pattern?</strong> Each of the 27 has a deity, a symbol, and a character — Hasta (hand, Savitur, dexterity), Rohini (cart, Brahma, creation), Pushya (udder, Brihaspati, nourishment). Pada (1-4) refines to a Navamsa sign, which sharpens the marriage and dharma reading.</li>
+      <li><strong>Yoga (nitya) → what intensity does the moment carry?</strong> Auspicious yogas (Shobhana, Sukarma, Saubhagya/Sobhagya) bring ease; intense yogas (Vyatipata, Vaidhriti, Vishkambha) bring depth-through-difficulty. There are 27 nitya yogas, mapped to a moving Sun+Moon longitude sum. Do not confuse with placement-yogas like Harsha or Raja-yoga; nitya yogas are time-quality, not chart-combinations.</li>
+      <li><strong>Karana → fixed or movable life-base?</strong> Movable karana (Bava, Balava, Kaulava, Taitila, Garaja, Vanija, Vishti) = a life of motion, travel, change. Fixed karana (Shakuni, Chatushpada, Naga, Kimstughna) = a life of rootedness, settled-place, hereditary work.</li>
+    </ol>
+    <p><strong>Applied to this chart:</strong> (1) Shukla Navami → outward, devotional, courage-flavoured appetite; "do the brave good thing" energy. (2) Wednesday Mercury vara → intellect-default temperament; problem appears → response is to analyse, communicate, find the pattern. (3) Hasta Pada 1 → hand-skilled, dexterous, Aries-pada-of-initiation; the hand that does precise work and that initiates. (4) Sobhagya yoga → auspicious yoga; ease in fortune, grace in transitions, things tend to "work out." (5) Taitila karana (movable) → life of motion and mobility; relocations, transit-rich environment, multiple-domain career expected. <strong>Composite portrait, in one sentence:</strong> <em>"a courageous-but-analytical, hand-skilled, grace-favoured, mobility-prone soul" — and the panchanga said all of this before we looked at a single planet's house position.</em></p>
+    <p><strong>Alternative reading (when limbs conflict):</strong> Sometimes the panchanga gives contradictory signals — e.g., Shukla Paksha (outward) but Mercury vara (analytical). When this happens, the underlying personality is paradoxical: an extrovert who thinks before speaking, a confident person who internally double-checks. The conflict is the gift; it produces unusual depth-plus-execution combinations. Watch for this pattern in any chart with mixed-energy panchanga — typically these are the highest-impact lives because they integrate opposites that most people experience as either/or.</p>
+    <p class="mr"><strong>नियम:</strong> पंचांगाची पाच अंगे एकत्र मिळून क्षणाची ऊर्जात्मक गुणवत्ता वर्णन करतात. जन्म-वाचनासाठी क्रमाने पाच जलद प्रश्न विचारल्यावर सखोल शास्त्रीय अभ्यासाशिवाय वापरण्यायोग्य व्यक्ति-चित्र मिळते.</p>
+    <p class="mr"><strong>पाच प्रश्न:</strong></p>
+    <ol class="mr">
+      <li><strong>तिथी → चंद्र-सूर्य संबंध भुकेबद्दल काय सांगतो?</strong> शुक्ल पक्ष (वाढता चंद्र) = बाहेरून ऊर्जा, प्रदर्शनशील, वाढणारी. कृष्ण पक्ष (घटता चंद्र) = आतून ऊर्जा, चिंतनशील. विशिष्ट तिथी पुढे तीक्ष्ण करते — नवमी = भक्ती-धैर्य, एकादशी = त्याग-छटा, अष्टमी = तीक्ष्ण निवड, पौर्णिमा/अमावस्या = तीव्रतेचा उच्चांक.</li>
+      <li><strong>वार → दिवस-स्वामीची ऊर्जा कोणती?</strong> रविवार (सूर्य) = अधिकार/वडील, सोमवार (चंद्र) = आई/अंतर्ज्ञान, मंगळवार (मंगळ) = कृती/धैर्य, बुधवार (बुध) = बुद्धी/संवाद, गुरुवार (गुरू) = ज्ञान/आशावाद, शुक्रवार (शुक्र) = प्रेम/सौंदर्य, शनिवार (शनी) = शिस्त/मर्यादा.</li>
+      <li><strong>नक्षत्र → खोल मानसिक नमुना कोणता?</strong> २७ पैकी प्रत्येकाला देवता, चिन्ह, चारित्र्य — हस्त (हात, सवितृ, हस्तकौशल्य), रोहिणी (रथ, ब्रह्मा, सर्जन), पुष्य (कास, बृहस्पति, पोषण). पाद (१-४) नवमांश-राशी तीक्ष्ण करतो.</li>
+      <li><strong>नित्य-योग → क्षणाची तीव्रता कोणती?</strong> शुभ योग (शोभन, सुकर्म, सौभाग्य) सहजता आणतात; तीव्र योग (व्यतीपात, वैधृति, विष्कंभ) कष्टातून-खोली आणतात.</li>
+      <li><strong>करण → स्थिर की चल जीवन-तळ?</strong> चल करण (बव, बालव, कौलव, तैतिल, गरज, वणिज, विष्टी) = गती, प्रवास. स्थिर करण (शकुनी, चतुष्पाद, नाग, किंस्तुघ्न) = रुजलेले, स्थायी-स्थान.</li>
+    </ol>
+    <p class="mr"><strong>या कुंडलीला लागू:</strong> (१) शुक्ल नवमी → बाहेरून, भक्ती-धैर्य; "धाडसाने योग्य गोष्ट कर" ऊर्जा. (२) बुधवार बुध वार → बुद्धी-प्राथमिक स्वभाव; समस्या समोर येताच विश्लेषण, संवाद, नमुना-शोध. (३) हस्त पाद १ → हस्त-कौशल्य, सूक्ष्मता, मेष-पादाचा आरंभ; अचूक काम करणारा व पुढाकार घेणारा हात. (४) सौभाग्य योग → शुभ; नशीबात सहजता, संक्रमणात कृपा. (५) तैतिल करण (चल) → गती-प्रवास-बदल; अनेक-क्षेत्र करिअर अपेक्षित. <strong>एक-वाक्य चित्र:</strong> <em>"धैर्यवान-पण-विश्लेषक, हस्त-कुशल, कृपा-अनुकूल, गती-प्रिय आत्मा" — आणि कोणत्याही ग्रहाचे भाव-स्थान पाहण्यापूर्वीच पंचांगाने हे सर्व सांगितले.</em></p>
+    <p class="mr"><strong>पर्यायी वाचन (अंगे संघर्षात असतील तर):</strong> कधी पंचांग विरोधाभासी संकेत देतो. असे झाले तर अंतर्निहित व्यक्तिमत्त्व विरोधाभासी असते — आणि विरोध हीच भेट; ती असामान्य खोली-व-अंमलबजावणी संयोग निर्माण करते.</p>
+  </div>
+
+  <h2>2.4 Your Panchanga at Birth<span class="mr">तुमच्या जन्माचे पंचांग</span></h2>
+
+  <table>
+    <tr><th>Limb</th><th>Value</th><th>Meaning for you</th></tr>
+    <tr><td>Tithi (तिथी)</td><td>Shukla Navami (शुक्ल नवमी) — at birth; Ashtami had ended at 10:44 that morning</td><td>The 9th day of the waxing fortnight. Navami carries devotional and courageous energy — the tithi of Rama-navami and Durga-navami. People born on Navami tend toward principled action, faith expressed as deed, and a willingness to take on the difficult-but-right path.</td></tr>
+    <tr><td>Vara (वार)</td><td>Budhwar / Wednesday (बुधवार)</td><td>Mercury's day. Brings intellect, language facility, fine motor coordination, dexterity with information. Wednesday-born natives are wired for analysis, communication, and pattern-recognition.</td></tr>
+    <tr><td>Nakshatra (नक्षत्र)</td><td>Hasta, Pada 1 (हस्त, चरण १) — U.Phalguni had ended at 16:10</td><td>The "hand-shaped" mansion, deity Savitur (the divine craftsman-aspect of the Sun), lord Moon. Skilled hands, precision work, ability to "make things." Pada 1 falls in Aries navamsa — adds initiative and pioneering edge to the underlying dexterity.</td></tr>
+    <tr><td>Yoga (योग)</td><td>Sobhagya / Saubhagya (सौभाग्य) — at birth; Ayushman had ended at 14:16</td><td>An auspicious yoga — its very name means "good fortune." People born under Sobhagya tend to experience grace in life's pivots; difficulties dissolve more often than they crystallize, and help arrives at the right moments.</td></tr>
+    <tr><td>Karana (करण)</td><td>Taitila (तैतिल) — at birth; Kaulava had ended at 10:44</td><td>A movable karana (one of the seven chara karanas). Indicates a life of motion — travel, change of place, multi-domain work — rather than rooted, single-place routine. Taitila specifically suggests sweet temperament and good-fortune-through-action.</td></tr>
+    <tr><td>Paksha (पक्ष)</td><td>Shukla (शुक्ल)</td><td>Waxing Moon fortnight. People born under Shukla paksha tend to be more outward, expansive, performative — energy grows from within rather than withdrawing.</td></tr>
+    <tr><td>Ritu (ऋतू / season)</td><td>Hemant (हेमंत — early winter)</td><td>The early-winter season — the time of clear skies, settled grain, calm before deep cold. Children born in Hemant are often steady, durable, and slow-to-anger, with a strong winter constitution.</td></tr>
+    <tr><td>Ayan · Gola</td><td>Dakshinayan · Dakshin gola</td><td>Sun on its southern course, in the southern celestial hemisphere — the half of the year associated with reflection, inwardness of nature, and the introspective fruits of dakshinayan births.</td></tr>
+    <tr><td>Samvat / Saka</td><td>Vikram Samvat 2060 · Shaka 1925 · Math Margashirsha</td><td>The traditional Indian calendar year-markers. Margashirsha (Margshish) is regarded as the most spiritually charged month in the Gita — "māsānāṁ mārgaśīrṣo'ham."</td></tr>
+  </table>
+
+  <p class="mr">तिथी शुक्ल नवमी, वार बुधवार, नक्षत्र हस्त (पाद १), योग सौभाग्य, करण तैतिल, पक्ष शुक्ल, ऋतू हेमंत, अयन दक्षिणायन, गोल दक्षिण, मास मार्गशीर्ष, विक्रम संवत् २०६०, शक १९२५. ही पंचांगाची नोंद तुमच्या जन्माच्या क्षणाची "हवा" सांगते — शुभ, धैर्यदायी, हस्त-कुशल, गती-अनुकूल.</p>
+
+  <h2>2.5 Reading Panchanga as a Person<span class="mr">पंचांगातून व्यक्तिमत्त्व</span></h2>
+
+  <p>Even before we look at a single planet's house position, the Panchanga has already sketched a portrait. Let us trust the sketch, because every detail will be confirmed and amplified later in the book.</p>
+
+  <p>A <strong>Navami</strong>-born person carries the energy of "devotional courage" — the willingness to do the difficult-but-right thing because it is right, not because it is easy. The tithi of Rama-navami and Durga-navami is a tithi of dharmic action: holding the line, defending the principle, finishing the job. Navami natives often have an inner sense of "what should be done," and they suffer more from compromise than from struggle.</p>
+  <p class="mr"><strong>नवमी जन्म:</strong> नवमीला जन्मलेल्या व्यक्तीत "भक्ती-धैर्य" असते — कठीण-पण-योग्य गोष्ट योग्य आहे म्हणून करण्याची तयारी, कारण ती सोपी आहे म्हणून नव्हे. रामनवमी आणि दुर्गानवमीची ही तिथी धर्म-कृतीची तिथी आहे: मर्यादा सांभाळणे, तत्त्व पाळणे, काम पूर्ण करणे. नवमी-जन्मी लोकांना "काय करायला हवे" याचे आंतरिक भान असते, आणि तडजोडीत त्यांना संघर्षापेक्षा जास्त त्रास होतो. वडिलधाऱ्यांचे शब्द, परंपरा, आणि "बरोबर मार्ग" यांचा अंतर्मनात आदर असतो — हा आदर बाहेर नेहमी प्रकट होत नाही, पण निर्णयाच्या क्षणी तो वर येतो आणि व्यक्तीला सोप्या पर्यायाऐवजी कठीण-योग्य पर्याय निवडायला लावतो.</p>
+
+  <p>A <strong>Wednesday</strong>-born person carries Mercury in the bloodstream. The default response to a problem is to <em>understand</em> it — analyse, name, model, then act. Speech tends to be quick, precise, and information-rich; humour is often verbal and pattern-based; learning happens through reading, conversation, and "figuring things out." There is a built-in love for systems, languages, and well-designed tools. Wednesday-natives are wired for the modern world's information work — code, finance, research, writing, anything where the medium is symbol.</p>
+  <p class="mr"><strong>बुधवार जन्म:</strong> बुधवारी जन्मलेल्या व्यक्तीच्या रक्तातच बुध असतो. कोणतीही अडचण आली की पहिली प्रतिक्रिया <em>"समजून घे"</em> — विश्लेषण कर, नाव दे, नमुना ओळख, मग कृती कर. बोलणे झटपट, अचूक, माहितीने भरलेले; विनोद बहुधा शाब्दिक आणि नमुना-आधारित; शिकणे वाचन, संवाद, आणि "हे कसे चालते" शोधण्यातून. प्रणाली, भाषा, चांगली बनवलेली साधने यांच्याकडे जन्मजात ओढ. आधुनिक जगाच्या माहिती-कामासाठी — कोड, फायनान्स, संशोधन, लेखन, जिथे माध्यम चिन्ह आहे अशा कोणत्याही क्षेत्रासाठी — बुधवार-जातक नैसर्गिकरीत्या तयार असतो. कन्या ही पुष्करची चंद्र-राशी सुद्धा बुधाचीच, म्हणून ही बुध-छटा दुहेरी मजबूत.</p>
+
+  <p>A <strong>Hasta</strong>-born person is hand-skilled. The very name <em>hasta</em> means "hand," and the nakshatra's symbol is an open palm — the hand that crafts, the hand that heals, the hand that grasps the exact small object. Hasta natives are drawn to work that uses fine motor skill and precision: writing, drawing, instrument-playing, surgery, repair, micro-craft, code (the keyboard is the modern hasta-instrument). The deity, <em>Savitur</em>, is the radiant-craftsman aspect of the Sun — divine maker. Pada 1, falling in Aries navamsa, sharpens the hand with initiative — Pushkar's hand will not wait passively; it will start the work.</p>
+  <p class="mr"><strong>हस्त जन्म:</strong> हस्त नक्षत्राचा अर्थच "हात." चिन्ह — उघडी पंजा. हस्त-जन्मी लोक हाताने सूक्ष्म व अचूक काम करणारे असतात: लेखन, चित्र, वाद्य, शस्त्रक्रिया, दुरुस्ती, सूक्ष्म-कला, कोड (आधुनिक हस्त-साधन म्हणजे कीबोर्ड). देवता <em>सवितृ</em> — सूर्याचे तेजस्वी-कारागीर रूप, दैवी निर्माता. पाद १ मेष-नवमांशात पडतो, त्यामुळे हाताला पुढाकाराची धार — पुष्करचा हात निष्क्रियपणे थांबणार नाही; तो काम सुरू करेल. नक्षत्र-स्वामी चंद्र, आणि चंद्र स्वतः हस्ताच्याच पादात — म्हणजे चंद्र-शुद्ध संरचना. भावना, मन, आणि हस्त-कौशल्य एकाच धाग्यात गुंफलेले.</p>
+
+  <p>A <strong>Sobhagya yoga</strong> birth is an ancient Indian way of saying: "fortune will tend to favour this person." It is not a guarantee of an easy life, but it is a soft tilt toward grace — strangers offer help at the right moments, opportunities turn up at the right doors, mistakes get forgiven more often than they should. The yoga's name is literally <em>good-fortune</em> (sau-bhagya), and the tradition counts it among the most benevolent of the 27 nitya yogas.</p>
+  <p class="mr"><strong>सौभाग्य योग:</strong> सौभाग्य या नावाचा अर्थच "चांगले भाग्य." हे जीवन सोपे होईल याची हमी नाही, पण कृपेकडे एक हलकासा कल — योग्य क्षणी अनोळखी मदत करतात, संधी योग्य दारात येतात, चुका हव्या त्यापेक्षा अधिक वेळा माफ होतात. नित्य-योगांच्या २७ पैकी सौभाग्य हा सर्वात उदार आणि शुभ मानला जातो. कुठेतरी अडकल्यास "वाट सापडेल" ही आंतरिक खात्री हे या योगाचे वैशिष्ट्य. ही श्रद्धा भोळी नसून, पुनःपुन्हा अनुभवातून मिळवलेली असते — आणि हाच विश्वास पुढच्या संधीला खुलेपणाने सामोरे जाण्याची हिंमत देतो.</p>
+
+  <p>A <strong>Taitila karana</strong> birth signals <em>movable life-base</em> — motion is the default, not the exception. Taitila natives change residences, change roles, travel across geographies and disciplines; their lives have many chapters rather than one long settled one. The karana also carries a sweetness-of-temperament note in classical descriptions — Taitila is one of the more agreeable of the seven chara karanas.</p>
+  <p class="mr"><strong>तैतिल करण:</strong> तैतिल — सात चल करणांपैकी एक. म्हणजे जीवनात गती हाच डिफॉल्ट, स्थिरता अपवाद. तैतिल-जन्मी लोक निवासस्थान बदलतात, भूमिका बदलतात, अनेक भौगोलिक प्रदेशांत व विषयांत प्रवास करतात; आयुष्यात अनेक अध्याय असतात, एकच लांब स्थिर अध्याय नव्हे. शास्त्रीय वर्णनात तैतिलाला "मधुर स्वभाव" अशी जोड दिलेली — सात चल करणांत हे अधिक सुसंवादी म्हणून ओळखले जाते. विरोधाभास नाही — गती असली तरी ती कडवटपणा न आणता घडते.</p>
+
+  <p>A <strong>Shukla Paksha</strong> birth produces an outward turn. The waxing Moon symbolizes growth — moonlight is increasing, which trains the eyes (and the personality) to expand into more light. Shukla-paksha natives often feel best when something is being <em>built</em> — a project, a skill, a relationship, a body of work. They are less suited to seasons of pure withdrawal; they need a visible direction of growth.</p>
+  <p class="mr"><strong>शुक्ल पक्ष जन्म:</strong> चंद्र दर पंधरवड्याला वाढतो आणि घटतो. शुक्ल पक्ष म्हणजे वाढता चंद्र. या काळात जन्म घेणाऱ्यांचा स्वभाव <em>बहिर्मुख</em>, विस्तार-प्रवण असतो. वाढत्या चांदण्यात डोळे (आणि व्यक्तिमत्त्व) अधिक प्रकाशात विस्तारायला शिकतात. शुक्ल-जन्मी माणसांना काहीतरी <em>घडवण्यात</em> समाधान वाटते — प्रकल्प, कौशल्य, नातेसंबंध, कामाचे शरीर. केवळ माघार घेण्याच्या ऋतूत त्यांना अस्वस्थ वाटते; त्यांना वाढीची एक दृश्य दिशा हवी असते — "मी कुठेतरी जातो आहे" ही जाणीव.</p>
+
+  <h2>2.6 Avakahada Chakra — the Marathi panchanga's 13-cell signature<span class="mr">अवकहडा चक्र — मराठी पंचांगातली १३-कोष्टकांची स्वाक्षरी</span></h2>
+
+  <p>Open any classical Marathi panchanga and you will find, in the corner of the birth-chart page, a small grid of about thirteen labelled cells called the <em>Avakahada Chakra</em> (also spelled Avakahadā / Avakhad). It is the regional ritual-astrology compression of a birth-moment: instead of asking thirteen separate questions, the priest reads this one grid and instantly knows the native's gana, yoni, nadi, varna, vashya, the temple-paya, the auspicious naming-letter, and several other matchmaking-relevant attributes. The grid is the practical Marathi-Hindu interface for kundali-milan, sanskara timing, and householder muhurta. Pushkar's avakahada cells are recorded below.</p>
+  <p class="mr">कोणताही पारंपरिक मराठी पंचांग उघडा — जन्म-कुंडलीच्या पानावर कोपऱ्यात साधारण तेरा कोष्टकांचा एक छोटा तक्ता दिसेल; त्याला <em>अवकहडा चक्र</em> (काही ठिकाणी अवकहडा / अवखड) म्हणतात. हे जन्म-क्षणाचे प्रादेशिक धार्मिक-ज्योतिषीय संक्षिप्त रूप: तेरा वेगवेगळे प्रश्न विचारण्याऐवजी पुरोहित हा एक तक्ता वाचतो आणि लगेच जातकाचा गण, योनी, नाडी, वर्ण, वश्य, मंदिर-पाया, शुभ नाम-अक्षर, आणि कुंडली-जुळणीसाठी आवश्यक इतर अनेक गुण समजतो. कुंडली-मिलन, संस्कार-वेळ, गृहस्थ-मुहूर्त यांसाठी हा मराठी-हिंदू व्यवहारी इंटरफेस आहे. खाली पुष्करच्या अवकहडा चक्राच्या कोष्टकांची नोंद.</p>
+
+  <table>
+    <tr><th>#</th><th>Cell · Field</th><th>Value</th><th>What it tells you / याचा अर्थ</th></tr>
+    <tr><td>1</td><td>Ascendant-Lord (लग्न-स्वामी)</td><td>Cancer → Moon (कर्क → चंद्र)</td><td>The graha that "owns" the rising sign. Pushkar's life-mode is mediated by Moon — receptive, emotional intelligence, mother-as-archetype, the cardinal-water personality.</td></tr>
+    <tr><td>2</td><td>Rasi-Lord — Moon-sign Lord (राशी-स्वामी)</td><td>Virgo → Mercury (कन्या → बुध)</td><td>The graha that owns the natal Moon's sign. Pushkar's mind-mode is mediated by Mercury — analytical, language-rich, detail-attentive, service-oriented.</td></tr>
+    <tr><td>3</td><td>Nakshatra-Charan (नक्षत्र-चरण)</td><td>Hasta · Pada 1 (हस्त · चरण १)</td><td>Birth nakshatra and its quarter. Pada 1 falls in Aries navamsa — initiation-flavour layered on hand-skill.</td></tr>
+    <tr><td>4</td><td>Nakshatra-Lord (नक्षत्र-स्वामी)</td><td>Moon (चंद्र)</td><td>The graha that "owns" Hasta. Vimshottari Mahadasha therefore begins with Moon — see §2.7.</td></tr>
+    <tr><td>5</td><td>Gana (गण)</td><td>Deva (देव)</td><td>One of three classes — Deva (godly), Manushya (human), Rakshasa (demonic-strong). Deva-gana natives are mild-natured, polite, devotional, sensitive. In kundali-milan, best matched with Deva or Manushya; mismatched with Rakshasa.</td></tr>
+    <tr><td>6</td><td>Yoni (योनी)</td><td>Mahish — buffalo (महिष)</td><td>One of 14 animal-yonis derived from the 27 nakshatras. Mahish-yoni indicates strength, endurance, calm power, steady provision. Compatible yonis (cow, etc.) and incompatible yonis (horse, lion) are used in matchmaking.</td></tr>
+    <tr><td>7</td><td>Nadi (नाडी)</td><td>Adya — first (आद्या)</td><td>One of three nadis (Adya, Madhya, Antya). Determines a key kundali-milan dosha: same-nadi marriages traditionally face the "Nadi-dosha" caveat. Adya nadi is associated with vata-tendency in Ayurvedic mapping.</td></tr>
+    <tr><td>8</td><td>Varna · Varan (वर्ण / वरण)</td><td>Vaishya (वैश्य)</td><td>One of four varnas (Brahmin, Kshatriya, Vaishya, Shudra) assigned by Moon-sign. Vaishya = commercial-productive temperament, exchange-oriented, comfortable with markets, agriculture, trade, applied skill.</td></tr>
+    <tr><td>9</td><td>Vashya (वश्य)</td><td>Manav — human (मानव)</td><td>One of five vashyas (Manav, Vanchar/wild-quadruped, Chatushpad/tame-quadruped, Jalachar/aquatic, Keet/insect). Manav-vashya = natural ability to influence and lead other people, as opposed to influence over animals or environments.</td></tr>
+    <tr><td>10</td><td>Varga (वर्ग)</td><td>Mooshak — rat (मूषक)</td><td>One of several "animal-class" (varga) groupings used for compatibility and ghatak-checks. Mooshak-varga has its own enmity/friendship matrix with other vargas (e.g., Mooshak vs. Marjar/cat is enemy — note that Pushkar's "ghatak varga" in the panchanga is Marjar).</td></tr>
+    <tr><td>11</td><td>Yunja (युंज)</td><td>Madhya — middle (मध्य)</td><td>One of three Yunja positions (Aadi, Madhya, Antya) marking the placement of the birth-nakshatra within a triad. Madhya-yunja suggests balance, mediating role, neither-first-nor-last.</td></tr>
+    <tr><td>12</td><td>Hansak (हंसक)</td><td>Bhoomi — earth (भूमि)</td><td>One of five Hansak elements. Bhoomi-hansak indicates grounded, practical, materially-stable temperament — earth as the substrate of life.</td></tr>
+    <tr><td>13</td><td>Name-Alphabet (नामाक्षर)</td><td>Poo- (पू-)</td><td>The auspicious first-syllable for the native's name, derived from nakshatra-pada. Hasta Pada 1 yields <strong>पू</strong> — and the name <strong>पुष्कर</strong> (Pushkar) honours this exactly, opening with पू.</td></tr>
+    <tr><td>(+)</td><td>Paya (पाया, temple-foundation metal)</td><td>Rasi-paya Copper · Nakshatra-paya Silver (राशी-पाया तांबे · नक्षत्र-पाया चांदी)</td><td>Auspicious metal for foundation-stone rituals, temple-paya, naming-paya. Copper (Rasi-paya) is associated with vitality and circulation; Silver (Nakshatra-paya) is associated with Moon, coolness, and clarity.</td></tr>
+    <tr><td>(+)</td><td>Sun-sign (Western)</td><td>Sagittarius — Sagittarius (धनू)</td><td>Tropical Sun position. Western astrology calls Pushkar a "Sagittarius Sun." Vedic places the same Sun at sidereal Sagittarius 1°23′, in Moola nakshatra (the boundary nakshatra of the Galactic Centre).</td></tr>
+  </table>
+
+  <div class="callout gold">
+    <div class="label">How the Avakahada is actually used in a household / अवकहडा प्रत्यक्ष व्यवहारात कसे वापरतात</div>
+    <p>When a marriage proposal arrives, the family does not first read the natal chart — they first read the avakahada. Within ninety seconds the priest can check: <em>gana</em> compatibility (Deva-Deva pair = excellent), <em>yoni</em> compatibility (Mahish-Cow is friendly; Mahish-Horse is mismatched), <em>nadi</em> compatibility (different nadis = no dosha; same nadi = caveat), <em>varna</em> ordering (boy's varna ≥ girl's varna preferred in tradition), <em>vashya</em> domain (Manav-Manav fine; Manav-Vanchar problematic). These five comparisons yield Ashtakuta-Guna-Milan points; below 18/36 is traditionally a warning, above 24/36 is excellent. Avakahada also fixes the auspicious naming-letter (Pushkar's Poo- syllable from Hasta Pada 1), which in turn anchors the legal name, the deity-mantra-letter, and the engraved name on family records. In short: the avakahada is the practical entry-point to Vedic-Hindu life decisions; the natal chart is the deeper study that follows.</p>
+    <p class="mr">विवाह प्रस्ताव आला की कुटुंब प्रथम जन्म-कुंडली नव्हे, तर अवकहडा वाचते. नव्वद सेकंदांत पुरोहित तपासू शकतो: <em>गण</em>-जुळणी (देव-देव = उत्तम), <em>योनी</em>-जुळणी (महिष-गाय अनुकूल; महिष-घोडा प्रतिकूल), <em>नाडी</em>-जुळणी (वेगळ्या नाडी = दोष नाही; एकच नाडी = इशारा), <em>वर्ण</em>-क्रम (परंपरेत मुलाचा वर्ण मुलीच्या समान किंवा उच्च), <em>वश्य</em>-क्षेत्र (मानव-मानव चांगले; मानव-वनचर अडचण). या पाच तुलना अष्टकूट-गुणमिलन देतात; १८/३६ खाली इशारा, २४/३६ वर उत्तम. अवकहडा शुभ नामाक्षर सुद्धा निश्चित करते (हस्त पाद १ वरून पुष्करचे <em>पू</em>-अक्षर), जे कायदेशीर नाव, देवता-मंत्र-अक्षर, आणि कुटुंब-नोंदीतले कोरीव नाव ठरवते. थोडक्यात: अवकहडा हा वैदिक-हिंदू जीवन-निर्णयांचा व्यावहारिक प्रवेशद्वार; जन्म-कुंडली त्यानंतर येणारा सखोल अभ्यास.</p>
+  </div>
+
+  <h2>2.7 The Birth Mahadasha<span class="mr">जन्म महादशा</span></h2>
+
+  <p>Vimshottari Dasha — the 120-year wheel — does not start fresh at birth. It depends on which nakshatra the Moon was in. Each nakshatra is "owned" by one of the nine grahas (a 27-nakshatra cycle of 9 planets, repeating three times). The Mahadasha at birth begins with the lord of the nakshatra the Moon was in <em>at that exact moment</em> — but typically the child enters mid-stream, with only a partial balance of that period remaining.</p>
+  <p>Your nakshatra is <strong>Hasta</strong>, ruled by <strong>the Moon</strong>. Moon's full Mahadasha is 10 years. By the calculation, you were born with <strong>7 years, 7 months, and 14 days</strong> of Moon Mahadasha left to run. That period concluded on <strong>2 August 2011</strong>, after which <strong>Mars Mahadasha</strong> opened (running 7 years to 2 August 2018), and from 2 August 2018 onward the <strong>Rahu Mahadasha</strong> — your current 18-year chapter, running through to August 2036 — has been in force.</p>
+
+  <p class="mr">तुमचे नक्षत्र हस्त, स्वामी चंद्र. चंद्राची एकूण महादशा १० वर्षे. जन्मवेळी ७ वर्षे ७ महिने १४ दिवस चंद्र महादशा शिल्लक होती. ती २ ऑगस्ट २०११ ला संपली, तिथून मंगळ महादशा सुरू होऊन ७ वर्षे चालली. २ ऑगस्ट २०१८ पासून सध्याची १८-वर्षांची राहू महादशा सुरू आहे — ऑगस्ट २०३६ पर्यंत.</p>
+
+  <div class="callout gold">
+    <div class="label">The Moon-Mercury signature / चंद्र-बुधाची स्वाक्षरी</div>
+    <p>Notice how Moon and Mercury thread through Pushkar's birth: Moon is the Lagna-lord (Cancer rising), Moon is the Nakshatra-lord (Hasta is owned by Moon), Moon is the birth Mahadasha planet, and Moon itself sits in Mercury's sign Virgo — while Mercury, in turn, is the lord of that very Moon-sign and is placed in the 6th house alongside the Sun. Day-lord Wednesday (Mercury) closes the loop. This is unusually tight: four of the chart's most foundational layers (Lagna-lord, Nakshatra-lord, birth-MD, day-lord) all point to the Moon-Mercury pair. Mind, emotion, language, and skilled hand all share the same channel. We will see this fingerprint return in chapters on the 3rd-house Moon (ch10), the 6th-house Mercury (ch12), and the Virgo-Moon temperament (ch08).</p>
+    <p class="mr">पुष्करच्या जन्मात चंद्र आणि बुध एका धाग्यात गुंफलेले आहेत: चंद्र लग्न-स्वामी (कर्क लग्न), चंद्र नक्षत्र-स्वामी (हस्ताचा स्वामी चंद्र), चंद्र जन्म-महादशेचा ग्रह, आणि चंद्र स्वतः बुधाच्या कन्या राशीत — तर बुध त्याच चंद्र-राशीचा स्वामी असून सूर्यासोबत ६व्या भावात. वार-स्वामी बुधवार (बुध) लूप पूर्ण करतो. कुंडलीच्या चार पायाभूत स्तरांवर (लग्न-स्वामी, नक्षत्र-स्वामी, जन्म-महादशा, वार-स्वामी) चंद्र-बुध जोडी — मन, भावना, भाषा, आणि कुशल हात एकाच वाहिनीवरून. ही स्वाक्षरी पुढच्या अध्यायांत वारंवार दिसेल.</p>
+  </div>
+
+  <div class="callout gold">
+    <div class="label">Learning Note — How Vimshottari birth-balance is computed / शिकण्याची नोंद — विमशोत्तरी जन्म-शिल्लक कशी मोजली जाते</div>
+    <p><strong>Rule:</strong> The 120-year Vimshottari cycle is anchored to the Moon's exact position at birth, specifically to the <em>nakshatra-fraction</em> the Moon has already traversed. The Mahadasha at birth belongs to the nakshatra-lord of the natal Moon's nakshatra. The balance of that MD at birth = (full MD years) × (fraction of nakshatra remaining). Two ingredients are needed: the nakshatra-lord (which gives the planet whose MD runs first), and the Moon's nakshatra-percentage at birth (which gives how much of that MD is still unconsumed).</p>
+    <p><strong>The math, step by step (for this chart):</strong> Moon at birth was at 13°10′12″ Virgo (sidereal, Lahiri ayanamsa 23°54′31″). Hasta spans 10°00′ Virgo to 23°20′ Virgo (a 13°20′ window). The Moon at 13°10′ Virgo has traversed: 13°10′ − 10°00′ = 3°10′ of the nakshatra. Remaining = 13°20′ − 3°10′ = 10°10′. Fraction remaining = 10°10′ ÷ 13°20′ = 610 ÷ 800 = 0.7625. Moon's full Mahadasha = 10 years. Balance at birth = 10 × 0.7625 = 7.625 years = <strong>7 years, 7 months, 15 days</strong> (the panchanga's classical print shows "7Y 7M 14D"; the one-day variance comes from rounding the ayanamsa to the nearest arc-second). Moon MD therefore ends on 2 August 2011; Mars MD begins immediately after, running 7 years to 2 August 2018; Rahu MD begins thereafter, running 18 years to 2 August 2036.</p>
+    <p><strong>Why this matters:</strong> The Mahadasha at birth shapes the first chapter of life. Native born with a long balance of a difficult dasha (say Saturn MD with 18 years left) carries that planet's flavour through childhood and adolescence. Pushkar's case is the opposite: born with nearly the full 7.6-year balance of the gentlest dasha — Moon — which means the entire first chapter of life (from infancy almost to age 8) was bathed in Moon's mother-emotional-intuitive flavour. This is a strikingly soft, well-mothered start; Moon-MD childhood tends to produce emotionally rich, language-early, mother-bonded children.</p>
+    <p><strong>Applied to this chart:</strong> 7y 7m of Moon MD at birth = Moon's signature is the foundational dasha-flavour of infancy, toddlerhood, primary-school years; gentleness, emotional attunement, mother-centred world. From August 2011 to August 2018, Mars MD ran (ages 7.5 to 14.5) — middle-school and early-teens, with Mars-flavoured ambition, sport-or-physical-skill emphasis, and the first sharp identity assertions of pre-adolescence. From August 2018 onwards, Rahu MD opens (ages 14.5 to 32.5) — the current 18-year chapter of identity-experimentation, foreign or unconventional exposure, technology and ambition, and the building-out of an unconventional adult life.</p>
+    <p><strong>Alternative readings:</strong> If the Moon were at Hasta Pada 4 (closer to 23° Virgo) instead of Pada 1, the balance would be much smaller — only ~2 years of Moon MD remaining. Mars MD would have started around age 2 and Rahu around age 9, compressing the gentle-Moon phase and accelerating the more assertive dashas. If the Moon were at the very start of Hasta (just past 10°00′ Virgo), the balance would be near-full 10 years of Moon MD — Moon-flavour running through to age 10, making the entire first decade exceptionally soft and mother-centred. The exact starting point of the dasha cycle changes everything downstream; this is why precise birth time + accurate ayanamsa choice matter.</p>
+    <p class="mr"><strong>नियम:</strong> १२० वर्षांचे विमशोत्तरी चक्र चंद्राच्या जन्म-वेळच्या नेमक्या स्थानावर — विशेषतः चंद्राने आधीच पार केलेल्या <em>नक्षत्र-अंशावर</em> — नांगर लावलेले असते. जन्मवेळची महादशा जन्म-चंद्राच्या नक्षत्राच्या स्वामीची असते. त्या महादशेची जन्मवेळची शिल्लक = (पूर्ण महादशा वर्षे) × (नक्षत्राचा शिल्लक भाग).</p>
+    <p class="mr"><strong>गणित, पायरीपायरीने (या कुंडलीसाठी):</strong> जन्मवेळी चंद्र १३°१०'१२" कन्येत होता (सायन-निरपेक्ष, लाहिरी अयनांश २३°५४'३१"). हस्त १०°००' कन्या ते २३°२०' कन्या या १३°२०' खिडकीत पसरते. १३°१०' कन्येवरचा चंद्र पार केला: १३°१०' − १०°००' = ३°१०'. शिल्लक = १३°२०' − ३°१०' = १०°१०'. शिल्लक-भाग = १०°१०' ÷ १३°२०' = ६१० ÷ ८०० = ०.७६२५. चंद्राची पूर्ण महादशा = १० वर्षे. जन्म-शिल्लक = १० × ०.७६२५ = ७.६२५ वर्षे = <strong>७ वर्षे, ७ महिने, १५ दिवस</strong> (पारंपरिक पंचांगात "७ वर्षे ७ महिने १४ दिवस" — एक दिवसाचा फरक अयनांश-अचूकतेमुळे). चंद्र महादशा २ ऑगस्ट २०११ ला संपते; मंगळ महादशा ७ वर्षे, मग २ ऑगस्ट २०१८ पासून १८ वर्षांची राहू महादशा — २ ऑगस्ट २०३६ पर्यंत.</p>
+    <p class="mr"><strong>हे का महत्त्वाचे:</strong> जन्मवेळची महादशा आयुष्याच्या पहिल्या अध्यायाला आकार देते. पुष्करचा प्रकार उलट — सर्वात कोमल दशेची (चंद्राची) जवळ-जवळ पूर्ण ७.६ वर्षांची शिल्लक घेऊन जन्म — म्हणजे आयुष्याचा पूर्ण पहिला अध्याय (बाल्य ते जवळ-जवळ ८ वर्षांपर्यंत) चंद्राच्या आई-भावना-अंतर्ज्ञान छटेने भरलेला. भावनिकदृष्ट्या समृद्ध, भाषा-लवकर, आई-केंद्रित मूल — हीच चंद्र-महादशा बालपणाची वैशिष्ट्ये.</p>
+    <p class="mr"><strong>या कुंडलीला लागू:</strong> जन्मवेळी ७ वर्षे ७ महिने चंद्र महादशा = चंद्राची स्वाक्षरी बाल्य, लहान-बालपण, प्राथमिक शाळेची वर्षे यांची मूलभूत दशा-छटा. ऑगस्ट २०११ ते ऑगस्ट २०१८ मंगळ महादशा (वय ७.५ ते १४.५) — माध्यमिक शाळा व पौगंडावस्थेपूर्वीची वर्षे, मंगळ-छटा-महत्त्वाकांक्षा, खेळ-किंवा-शारीरिक-कौशल्य, पहिली ओळख-ठाम विधाने. ऑगस्ट २०१८ पासून राहू महादशा (वय १४.५ ते ३२.५) — ओळख-प्रयोग, परदेश किंवा अपारंपरिक संपर्क, तंत्रज्ञान व महत्त्वाकांक्षा यांचा सध्याचा १८-वर्षांचा अध्याय.</p>
+  </div>
+
+  <h2>2.8 The Day in History<span class="mr">त्या दिवसाची नोंद</span></h2>
+
+  <p>17 December 2003 was, for the world at large, an ordinary Wednesday. India was deep into the Vajpayee-NDA-coalition years; the Indian IT industry had crossed its first wave and was scaling globally; the Mumbai-Pune-Bangalore-Hyderabad axis was crystallizing into the country's tech spine. Mobile phones had begun reaching smaller towns. Maharashtra's monsoon was a memory; the soil had dried and the early-winter Hemant chill had settled over the Konkan-Thane belt. Kalyan-Ambernath, on the Mumbai-suburban rail-and-highway corridor, was already a commuting-and-industrial hub feeding the metropolis. Internationally, on the very same week the Wright Brothers' first flight centenary was being marked; Saddam Hussein had been captured three days earlier; the Human Genome Project's final completion announcement was just months away. The astrological texts say children born close to Margashirsha-Shukla-Navami carry "dharma-vibration" — they tend to feel obligation as energy rather than burden, and they navigate the modern world with a quietly principled compass.</p>
+  <p class="mr">१७ डिसेंबर २००३ — एक सामान्य बुधवार. भारत वाजपेयी-राष्ट्रीय-लोकशाही-आघाडीच्या वर्षांत; भारतीय आयटी उद्योगाची पहिली लाट पूर्ण होऊन जागतिक-स्तरावर विस्तार; मुंबई-पुणे-बंगळुरू-हैदराबाद हा देशाचा तंत्रज्ञान-कणा रचला जात होता. मोबाइल फोन छोट्या शहरांत पोहोचत होते. महाराष्ट्रातील पावसाळा संपून हेमंतची थंडी कोकण-ठाण्याच्या पट्ट्यात बसली होती. कल्याण-अंबरनाथ, मुंबई-उपनगरी रेल्वे-महामार्ग जोडावर, उपनगरीय व औद्योगिक केंद्र म्हणून आधीच महानगराला अन्न-कामगार पुरवत होते. आंतरराष्ट्रीय पातळीवर त्याच आठवड्यात राइट बंधूंच्या पहिल्या उड्डाणाची शताब्दी; तीन दिवसांपूर्वी सद्दाम हुसेन पकडला गेला होता; मानवी जीनोम प्रकल्पाची अंतिम पूर्तता काही महिन्यांवर येऊन ठेपली होती. शास्त्र सांगते — मार्गशीर्ष-शुक्ल-नवमीजवळ जन्मलेली मुले "धर्म-स्पंदन" घेऊन येतात; कर्तव्य त्यांना ओझे न वाटता ऊर्जा वाटते, आणि आधुनिक जगात ते शांतपणे तत्त्वनिष्ठ दिशादर्शक घेऊन वावरतात.</p>
+
+  <h2>2.9 What We Have So Far<span class="mr">आत्तापर्यंतचा सारांश</span></h2>
+
+  <ul>
+    <li>Born 17 December 2003 (Wednesday), 21:43 IST, Maharashtra · PIN 421301 (Kalyan-Ambernath corridor).</li>
+    <li>Latitude 19°13′36″ N, longitude 73°06′20″ E, IST timezone, Lahiri ayanamsa 23°54′31″.</li>
+    <li>Lagna: Cancer 21°39′53″ — Aslesha nakshatra Pada 2; Lagna-lord Moon.</li>
+    <li>Moon (Rasi): Virgo 13°10′12″ — Hasta nakshatra Pada 1; Rasi-lord Mercury; Nakshatra-lord Moon.</li>
+    <li>Panchanga: Shukla Navami · Budhwar · Hasta (Pada 1) · Sobhagya · Taitila · Shukla Paksha · Hemant ritu · Dakshinayan · Margashirsha · Vikram Samvat 2060.</li>
+    <li>Avakahada: Gana Deva · Yoni Mahish · Nadi Adya · Varna Vaishya · Vashya Manav · Varga Mooshak · Yunja Madhya · Hansak Bhoomi · Name-letter Poo (पू) · Paya Copper-Silver.</li>
+    <li>Birth Mahadasha: Moon, with 7y 7m 14d remaining (ended 2 Aug 2011). Mars MD followed (2011-2018). Rahu MD is currently running (Aug 2018 → Aug 2036).</li>
+    <li>The signature element of birth is the <strong>Moon-Mercury pair</strong> — Lagna-lord, Nakshatra-lord, birth-MD, day-lord, Rasi-lord — all routed through Moon and Mercury.</li>
+  </ul>
+
+  <ul class="mr">
+    <li><strong>जन्म:</strong> १७ डिसेंबर २००३ (बुधवार), रात्री ९:४३ (IST), महाराष्ट्र — पिन ४२१३०१ (कल्याण-अंबरनाथ परिसर).</li>
+    <li><strong>भौगोलिक नोंदी:</strong> अक्षांश १९°१३'३६" उत्तर, रेखांश ७३°०६'२०" पूर्व, IST कालक्षेत्र, लाहिरी अयनांश २३°५४'३१".</li>
+    <li><strong>लग्न:</strong> कर्क २१°३९'५३" — आश्लेषा नक्षत्र चरण २; लग्न-स्वामी चंद्र.</li>
+    <li><strong>चंद्र (राशी):</strong> कन्या १३°१०'१२" — हस्त नक्षत्र चरण १; राशी-स्वामी बुध; नक्षत्र-स्वामी चंद्र.</li>
+    <li><strong>पंचांग:</strong> तिथी शुक्ल नवमी, वार बुधवार, नक्षत्र हस्त पाद १, योग सौभाग्य, करण तैतिल, पक्ष शुक्ल, ऋतू हेमंत, अयन दक्षिणायन, मास मार्गशीर्ष, विक्रम संवत् २०६०.</li>
+    <li><strong>अवकहडा:</strong> गण देव · योनी महिष · नाडी आद्या · वर्ण वैश्य · वश्य मानव · वर्ग मूषक · युंज मध्य · हंसक भूमि · नामाक्षर पू · पाया तांबे-चांदी.</li>
+    <li><strong>जन्म महादशा:</strong> चंद्र, ७ वर्षे ७ महिने १४ दिवस शिल्लक (२ ऑगस्ट २०११ ला संपली). मग मंगळ महादशा (२०११-२०१८). सध्या राहू महादशा सुरू — ऑगस्ट २०१८ ते ऑगस्ट २०३६.</li>
+    <li><strong>मुख्य स्वाक्षरी:</strong> <strong>चंद्र-बुध</strong> जोडी — लग्न-स्वामी, नक्षत्र-स्वामी, जन्म-महादशा, वार-स्वामी, राशी-स्वामी — सर्व चंद्र व बुधातून जातात. मन, भावना, भाषा, हस्त-कौशल्य एकाच वाहिनीवर.</li>
+    <li><strong>मुख्य गुण:</strong> नवमी-जन्मामुळे धर्म-धैर्य, बुधवार-जन्मामुळे विश्लेषण-प्राधान्य, हस्तामुळे हस्त-कौशल्य व पुढाकार, सौभाग्य-योगामुळे कृपा-कल, तैतिल-करणामुळे चल जीवन, शुक्ल-पक्षामुळे बहिर्मुख वाढ, हेमंत ऋतूमुळे स्थिर-संयमी प्रकृति.</li>
+  </ul>
+
+  <p>Now that the moment is anchored, the next chapter steps back and explains the twelve rashis (zodiac signs). After that, we will look at the 27 nakshatras with extra time on Hasta, then the 12 houses, and only then return to the actual planets in your chart — the deeper readings of Cancer Lagna, Virgo Moon, Sun-Mercury in 6th, Jupiter in 2nd, Mars in 9th, Saturn in 12th, and the Rahu-Ketu axis on the 10th-4th. Reference grids — the full Vimshottari Mahadasha-Antardasha-Pratyantardasha tables for all 120 years — are in <a href="ch02a-charts.html">Chapter 2a</a>.</p>
+
+  <p class="mr">आता क्षण नांगरला आहे; पुढच्या अध्यायात बारा राशींची ओळख, मग सत्तावीस नक्षत्रे (हस्तावर भर), मग बारा भाव. त्यानंतर दुसऱ्या भागात तुमच्या ग्रहांची सविस्तर मांडणी — कर्क लग्न, कन्या चंद्र, ६व्या भावात सूर्य-बुध, २ऱ्या भावात गुरू, ९व्या भावात मंगळ, १२व्या भावात शनी, आणि १०-४ अक्षावर राहू-केतू. संपूर्ण १२० वर्षांचे विमशोत्तरी महादशा-अंतर्दशा-प्रत्यंतर्दशा तक्ते <a href="ch02a-charts.html">अध्याय २अ</a> मध्ये.</p>
+
+  <div class="pager">
+    <a href="ch01-how-to-read.html">← Chapter 1</a>
+    <a href="index.html" class="toc-link">Table of Contents</a>
+    <a href="ch02a-charts.html">Chapter 2a: Charts →</a>
+  </div>
+</main>
+</body>
+</html>

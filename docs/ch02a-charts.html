@@ -1,1 +1,373 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>ch02a-charts — Pushkar Kundli</title><link rel='stylesheet' href='style.css'></head><body><main><div class='hero'><h1>Placeholder: ch02a-charts</h1></div><p>This chapter is pending authoring. — placeholder.</p><p><a href='index.html'>← TOC</a></p></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 2a — Reference Charts &amp; Dasha Tables | Pushkar's Kundli</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .ni-chart-figure { margin: 1.5em auto; max-width: 500px; text-align: center; }
+  .ni-chart { width: 100%; height: auto; max-width: 460px; display: block; margin: 0.6em auto; }
+  .ni-chart-title { font-size: 0.95em; color: #6b5a3a; margin-bottom: 0.4em; font-style: italic; }
+  .chart-caption { text-align: center; font-size: 0.9em; color: #6b5a3a; margin-top: -0.5em; margin-bottom: 1.5em; }
+  .glyph-key { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 0.4em; margin: 1em 0; font-size: 0.92em; }
+  .glyph-key span { background: #f7f3e3; padding: 4px 8px; border-left: 3px solid #c8a96a; }
+  .pd-table-wrap { margin: 1em 0; }
+  .pd-table-wrap h4 { font-size: 1em; margin: 1em 0 0.3em 0; color: #5a3d1f; border-bottom: 1px dashed #c8a96a; padding-bottom: 3px; }
+  .pd-table-wrap table { font-size: 0.88em; }
+  .pd-current { background: #fff3d4; }
+</style>
+</head>
+<body>
+<aside class="nav">
+  <div class="brand">ज्योतिष ग्रंथ</div>
+  <div class="brand-sub">A Book of Light · Pushkar's Kundli</div>
+  <h4>Front</h4><a href="index.html">Table of Contents</a>
+  <h4>Part I</h4><a href="ch01-how-to-read.html">1. How to Read</a><a href="ch02-birth-details.html">2. Birth</a><a href="ch02a-charts.html" class="active">2a. Charts</a><a href="ch03-rashis.html">3. Rashis</a><a href="ch04-nakshatras.html">4. Nakshatras</a><a href="ch05-houses.html">5. Houses</a>
+  <h4>Part II</h4><a href="ch06-grahas.html">6. Grahas</a><a href="ch07-cancer-lagna.html">7. Cancer Lagna</a><a href="ch08-virgo-moon.html">8. Virgo Moon</a><a href="ch09-sun-6th.html">9. Sun 6th</a><a href="ch10-moon-3rd.html">10. Moon 3rd</a><a href="ch11-mars-9th.html">11. Mars 9th</a><a href="ch12-mercury-6th.html">12. Mercury+Sun 6th</a><a href="ch13-jupiter-2nd.html">13. Jupiter 2nd</a><a href="ch14-saturn-12th.html">14. Saturn 12th + Ketu 4th</a><a href="ch15-house-by-house.html">15. House-by-House</a>
+  <h4>Part III</h4><a href="ch16-yogas.html">16. Yogas</a><a href="ch17-doshas.html">17. Doshas</a>
+  <h4>Part IV</h4><a href="ch18-vimshottari.html">18. Vimshottari</a><a href="ch21-rahu-md.html">21. Rahu MD</a><a href="ch22-jupiter-md.html">22. Jupiter MD</a>
+  <h4>Part V</h4><a href="ch25-sade-sati.html">25. Sade Sati</a><a href="ch26-transits.html">26. Gochar</a>
+  <h4>Part VI</h4><a href="ch28-marriage.html">28. Marriage</a><a href="ch29-career.html">29. Career</a><a href="ch30-health.html">30. Health</a><a href="ch31-children.html">31. Children</a><a href="ch31a-life-events.html">31a. Life-Event Diagnostic</a>
+  <h4>Part VII</h4><a href="ch32-remedies.html">32. Remedies</a><a href="ch33-glossary.html">33. Glossary</a>
+</aside>
+
+<main>
+  <div class="topbar">
+    <div class="breadcrumb">Part I · Foundations · Reference Page</div>
+    <div class="chapter-num">Chapter 02a</div>
+  </div>
+
+  <h1>Reference Charts &amp; Dasha Tables<span class="mr">संदर्भ कुंडली व दशा-तक्ते</span></h1>
+
+  <p class="lede">This page is a <em>verification deck</em> for Pushkar's kundli. Every claim made in later chapters — "Saturn in Gemini 12H", "Rahu MD runs Aug 2018 → Aug 2036", "Sade-Sati begins ~2028 from Virgo Moon", "Sun-Jupiter Parivartana between 2H and 6H is the chart's flagship yoga" — can be looked up here in seconds. Keep this tab open while reading; flip back any time a chapter says <em>"because of X"</em> and confirm that X is actually in the chart. The page contains: (1) the D1 Rashi (Lagna) kundli, (2) the Chandra kundli (chart from Moon), (3) the planet-sign-house-dignity master table, (4) the complete Vimshottari Dasha table from birth (17 Dec 2003) to year 2121 covering all nine Mahadashas, (5) Antardasha breakdowns for the current Rahu MD and the next Jupiter MD, (6) the Sade-Sati phase schedule for the Virgo Moon, and (7) a glyph legend with a 3-step "how to read this chart" guide.</p>
+  <p class="mr">हे पान पुष्करच्या कुंडलीसाठी एक <em>पडताळणी-डेक</em> आहे. पुढच्या अध्यायांत केलेला प्रत्येक दावा — "शनी मिथुन १२व्या भावात", "राहू महादशा ऑग २०१८ → ऑग २०३६", "कन्या-चंद्रापासून साडेसाती ~२०२८ ला सुरू", "२अ-६ भावांत सूर्य-गुरू परिवर्तन हा कुंडलीचा प्रमुख योग" — इथे काही सेकंदांत तपासता येतो. वाचताना हा टॅब उघडा ठेवा; जेव्हा एखादा अध्याय <em>"X मुळे"</em> असे म्हणतो तेव्हा X खरोखर कुंडलीत आहे का ते इथे पडताळून पहा. या पानावर: (१) D1 राशि (लग्न) कुंडली, (२) चंद्र कुंडली, (३) ग्रह-राशि-भाव-बल मुख्य तक्ता, (४) जन्म (१७ डिसेंबर २००३) पासून २१२१ पर्यंत संपूर्ण विमशोत्तरी दशा-तक्ता — सर्व नऊ महादशा, (५) सध्याच्या राहू महादशेसाठी व पुढच्या गुरू महादशेसाठी अंतर्दशा-तपशील, (६) कन्या-चंद्रासाठी साडेसातीचे टप्पे, आणि (७) ग्रह-चिन्ह-सूची व ३-पायरीची "कुंडली कशी वाचावी" मार्गदर्शिका.</p>
+
+  <div class="callout green">
+    <div class="label">Birth-data anchor / जन्म-माहितीचा आधार</div>
+    <p>All figures on this page are computed for: <strong>17 December 2003, 9:43 PM IST, Maharashtra (PIN 421301, lat 19°13'36" N, lon 73°06'20" E), Lahiri Ayanamsa 23°54'31"</strong>. Lagna: Cancer 21°39'53" (Aslesha pada 2). Moon: Virgo 13°10'12" (Hasta pada 1). Birth-balance Moon-MD = 7 years 7 months 14 days. Use this page as the source-of-truth when any later chapter's date or placement looks off — every number elsewhere in the book was derived from these positions.</p>
+    <p class="mr">या पानावरील सर्व आकडे या जन्म-माहितीसाठी काढले: <strong>१७ डिसेंबर २००३, रात्री ९:४३ IST, महाराष्ट्र (पिन ४२१३०१, अक्षांश १९°१३'३६" उत्तर, रेखांश ७३°०६'२०" पूर्व), लाहिरी अयनांश २३°५४'३१"</strong>. लग्न: कर्क २१°३९'५३" (आश्लेषा चरण २). चंद्र: कन्या १३°१०'१२" (हस्त चरण १). जन्म-शिल्लक चंद्र-महादशा = ७ वर्षे ७ महिने १४ दिवस. कोणत्याही पुढच्या अध्यायात तारीख किंवा ग्रहस्थान संशयास्पद वाटले की हे पान सत्य-स्रोत म्हणून वापरा — पुस्तकातील इतरत्र प्रत्येक अंक याच ग्रह-स्थितीतून काढलेला आहे.</p>
+  </div>
+
+  <h2>2a.1 D1 Rashi Kundli — Lagna Chart<span class="mr">२अ.१ D1 राशि कुंडली — लग्न कुंडली</span></h2>
+
+  <p><strong>North-Indian diamond style.</strong> The outer square is divided by both diagonals plus an inscribed diamond, creating 12 regions. Houses are <em>fixed</em> in position: <strong>1st (Lagna) at top centre</strong>, 2nd to its upper-left, 3rd at left-upper, 4th at left-centre, and so on counter-clockwise. The <em>signs rotate</em> based on the Lagna — for this chart Cancer (sign 4) sits in the 1st house, so the sign-number in each cell starts at 4 and increases counter-clockwise. Planet abbreviations (Devanagari + Latin) are written inside whichever house their sign occupies. <strong>"लग्न / LAGNA"</strong> in red marks the rising sign.</p>
+  <p class="mr"><strong>उत्तर-भारतीय हिऱ्याची शैली.</strong> बाह्य चौकोनाला दोन्ही कर्ण + आतला हिरा यांनी बारा भागांत विभागले आहे. भाव <em>निश्चित</em> स्थानी असतात: <strong>१ला (लग्न) वर मध्यभागी</strong>, २रा त्याच्या वर-डावीकडे, ३रा डावीकडे-वर, ४था डावीकडे-मध्यभागी — असे अप्रदक्षिणा क्रमाने पुढे. <em>राशी फिरतात</em> लग्नानुसार — या कुंडलीसाठी कर्क (राशी ४) १ल्या भावात असल्याने प्रत्येक घरात राशि-क्रमांक ४ पासून सुरू होऊन अप्रदक्षिणेने वाढतो. ग्रहांचे संक्षेप (देवनागरी + इंग्रजी) त्यांच्या राशी ज्या घरात येते त्या घरात लिहिले. <strong>"लग्न / LAGNA"</strong> लाल खूण उगवती राशी दर्शवते.</p>
+
+  <figure class="ni-chart-figure">
+    <figcaption class="ni-chart-title"><strong>D1 Rashi (Lagna) Kundli / जन्म कुंडली · लग्न कुंडली</strong> — 17 Dec 2003, 9:43 PM, Maharashtra · Lagna: Cancer (कर्क) 21°39'</figcaption>
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="ni-chart" role="img" aria-label="D1 Rashi Lagna Kundli — North Indian Diamond">
+      <rect x="2" y="2" width="396" height="396" fill="#faf6e8" stroke="#8a6f3d" stroke-width="3"/>
+      <line x1="2" y1="2" x2="398" y2="398" stroke="#8a6f3d" stroke-width="2"/>
+      <line x1="398" y1="2" x2="2" y2="398" stroke="#8a6f3d" stroke-width="2"/>
+      <polygon points="200,2 398,200 200,398 2,200" fill="none" stroke="#8a6f3d" stroke-width="2"/>
+
+      <text x="200" y="78" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">4</text>
+      <text x="200" y="98" text-anchor="middle" font-size="10" font-weight="bold" fill="#c0392b">लग्न · LAGNA</text>
+      <text x="200" y="112" text-anchor="middle" font-size="9" fill="#8a6f3d">कर्क · Cancer</text>
+
+      <text x="100" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">5</text>
+      <text x="100" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">गु · Ju</text>
+      <text x="100" y="64" text-anchor="middle" font-size="9" fill="#5a3d1f">सिंह · Leo</text>
+
+      <text x="30" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">6</text>
+      <text x="62" y="118" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">च · Mo</text>
+      <text x="62" y="132" text-anchor="middle" font-size="9" fill="#5a3d1f">कन्या · Virgo</text>
+
+      <text x="100" y="192" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">7</text>
+      <text x="100" y="214" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">के(व) · Ke(R)</text>
+      <text x="100" y="228" text-anchor="middle" font-size="9" fill="#5a3d1f">तूळ · Libra</text>
+
+      <text x="30" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">8</text>
+      <text x="62" y="318" text-anchor="middle" font-size="9" fill="#8a6f3d">वृश्चिक · Sco</text>
+
+      <text x="100" y="372" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">9</text>
+      <text x="100" y="350" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">र · बु(व)</text>
+      <text x="100" y="363" text-anchor="middle" font-size="9" fill="#5a3d1f">Su · Me(R)</text>
+      <text x="100" y="388" text-anchor="middle" font-size="9" fill="#8a6f3d">धनू · Sag</text>
+
+      <text x="200" y="298" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">10</text>
+      <text x="200" y="278" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">शु · Ve</text>
+      <text x="200" y="320" text-anchor="middle" font-size="9" fill="#8a6f3d">मकर · Cap</text>
+
+      <text x="300" y="372" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">11</text>
+      <text x="300" y="388" text-anchor="middle" font-size="9" fill="#8a6f3d">कुंभ · Aqu</text>
+
+      <text x="370" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">12</text>
+      <text x="338" y="318" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">मं · Ma</text>
+      <text x="338" y="282" text-anchor="middle" font-size="9" fill="#5a3d1f">मीन · Pis</text>
+
+      <text x="300" y="192" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">1</text>
+      <text x="300" y="214" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">रा(व) · Ra(R)</text>
+      <text x="300" y="228" text-anchor="middle" font-size="9" fill="#5a3d1f">मेष · Aries</text>
+
+      <text x="370" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">2</text>
+      <text x="338" y="118" text-anchor="middle" font-size="9" fill="#8a6f3d">वृषभ · Tau</text>
+
+      <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">3</text>
+      <text x="300" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">श(व) · Sa(R)</text>
+      <text x="300" y="64" text-anchor="middle" font-size="9" fill="#5a3d1f">मिथुन · Gem</text>
+    </svg>
+  </figure>
+  <p class="chart-caption">Large number in each house = sign number (1 Aries → 12 Pisces). Red Devanagari + Latin = planets in that house; "(व)" / "(R)" marks retrograde. Sign and planet glyph legend in section 2a.7. / प्रत्येक भावात मोठा अंक = राशी-क्रमांक (१ मेष → १२ मीन). लाल देवनागरी + इंग्रजी = त्या भावातील ग्रह; "(व)" / "(R)" वक्री दर्शवते. राशी व ग्रह-चिन्हांची सूची विभाग २अ.७ मध्ये.</p>
+
+  <h3>Planet-Sign-House-Dignity table<span class="mr">ग्रह-राशि-भाव-बल तक्ता</span></h3>
+  <table>
+    <tr><th>Planet / ग्रह</th><th>Sign / राशी</th><th>Degree / अंश</th><th>House / भाव</th><th>Nakshatra · Pada / नक्षत्र · चरण</th><th>Dignity / बल</th><th>Lordship for Cancer / कर्क लग्नासाठी स्वामित्व</th></tr>
+    <tr><td>Ascendant / लग्न (Lg)</td><td>Cancer / कर्क</td><td>21°39'53"</td><td>1H / १ला</td><td>Aslesha / आश्लेषा · 2</td><td>—</td><td>—</td></tr>
+    <tr><td>Sun / सूर्य (Su)</td><td>Sagittarius / धनू</td><td>01°23'16"</td><td>6H / ६वा</td><td>Moola / मूळ · 1</td><td>Friend's sign / मित्र-राशी</td><td>2L — primary maraka, also Sun-Jupiter Parivartana / २-स्वामी — प्राथमिक मारक, सूर्य-गुरू परिवर्तन</td></tr>
+    <tr><td>Moon / चंद्र (Mo)</td><td>Virgo / कन्या</td><td>13°10'12"</td><td>3H / ३रा</td><td>Hasta / हस्त · 1</td><td>Friend's sign / मित्र-राशी</td><td>1L — Lagna lord, lifespan-significator / १-स्वामी — लग्न-स्वामी, आयुष्य-कारक</td></tr>
+    <tr><td>Mars / मंगळ (Ma)</td><td>Pisces / मीन</td><td>06°44'20"</td><td>9H / ९वा</td><td>U.Bhadrapada / उत्तरा भाद्रपदा · 2</td><td>Friend's sign / मित्र-राशी</td><td>5L + 10L — <strong>yogakaraka</strong> / ५-स्वामी + १०-स्वामी — <strong>योगकारक</strong></td></tr>
+    <tr><td>Mercury / बुध (Me, R)</td><td>Sagittarius / धनू</td><td>18°39'14"</td><td>6H / ६वा</td><td>P.Ashada / पूर्वाषाढा · 2</td><td>Neutral · Retrograde · Budhaditya / सम · वक्री · बुधादित्य</td><td>3L + 12L</td></tr>
+    <tr><td>Jupiter / गुरु (Ju)</td><td>Leo / सिंह</td><td>01°38'54"</td><td>2H / २रा</td><td>P.Phalguni / पूर्वा फाल्गुनी · 4</td><td>Friend's sign — <strong>Atmakaraka</strong> / मित्र-राशी — <strong>आत्मकारक</strong></td><td>6L + 9L — Parivartana with Sun / सूर्याशी परिवर्तन</td></tr>
+    <tr><td>Venus / शुक्र (Ve)</td><td>Capricorn / मकर</td><td>17°00'14"</td><td>7H / ७वा</td><td>U.Ashada / उत्तराषाढा · 4</td><td>Friend's sign / मित्र-राशी</td><td>4L + 11L</td></tr>
+    <tr><td>Saturn / शनी (Sa, R)</td><td>Gemini / मिथुन</td><td>17°00'14"</td><td>12H / १२वा</td><td>Ardra / आर्द्रा · 4</td><td>Friend's sign · Retrograde / मित्र-राशी · वक्री</td><td>7L + 8L — <strong>double maraka</strong> / ७-स्वामी + ८-स्वामी — <strong>दुहेरी मारक</strong></td></tr>
+    <tr><td>Rahu / राहू (Ra, R)</td><td>Aries / मेष</td><td>24°33'06"</td><td>10H / १०वा</td><td>Bharani / भरणी · 4</td><td>Enemy sign / शत्रू-राशी</td><td>Shadow / छाया-ग्रह</td></tr>
+    <tr><td>Ketu / केतू (Ke, R)</td><td>Libra / तूळ</td><td>24°33'06"</td><td>4H / ४था</td><td>Vishakha / विशाखा · 4</td><td>Neutral / सम</td><td>Shadow / छाया-ग्रह</td></tr>
+  </table>
+
+  <p><em>Fortuna (Part of Fortune): Taurus 03°32'52" (11H from Lagna). KP Ayanamsa for cuspal-sub-lord work: 23°48'28". KP balance of Moon dasha at birth: 7Y 6M 17D.</em></p>
+  <p class="mr"><em>फॉर्च्युना (भाग्य-बिंदू): वृषभ ०३°३२'५२" (लग्नापासून ११वा). KP कुसप-उप-स्वामी कार्यासाठी KP अयनांश: २३°४८'२८". KP जन्म-शिल्लक चंद्र-दशा: ७ वर्षे ६ महिने १७ दिवस.</em></p>
+
+  <h2>2a.2 Chandra Kundli — Chart from Moon<span class="mr">२अ.२ चंद्र कुंडली — चंद्रापासूनची कुंडली</span></h2>
+
+  <p>Same nine planets, same sign-positions — but Moon (Virgo) is now treated as the <strong>1st house</strong>. Houses count from Moon instead of Lagna. Used heavily in classical reading: many texts say "look at the chart from the Moon as a second Lagna" because the Moon represents mind, emotion, and the mother's reading of the native. Sade-Sati is also computed from the Moon, not from Lagna — which is why this chart matters for the 2028-2034 Sade-Sati window discussed in ch25.</p>
+  <p class="mr">तेच नऊ ग्रह, त्याच राशी-स्थानांत — पण आता चंद्र (कन्या) <strong>१ल्या भावात</strong> आहे असे मानले जाते. भाव लग्नापासून न मोजता चंद्रापासून मोजायचे. शास्त्रीय वाचनात याचा सखोल उपयोग: अनेक ग्रंथ "चंद्राला दुसरे लग्न समजून कुंडली पहा" असे सांगतात — कारण चंद्र मन, भावना, आणि आईच्या नजरेतून जातकाचे चित्र दाखवतो. साडेसातीदेखील लग्नापासून नव्हे, चंद्रापासून मोजली जाते — म्हणून ch25 मधील २०२८-२०३४ च्या साडेसाती-खिडकीसाठी हा तक्ता महत्त्वाचा.</p>
+
+  <figure class="ni-chart-figure">
+    <figcaption class="ni-chart-title"><strong>Chandra Kundli / चंद्र कुंडली</strong> — Moon (Virgo / कन्या) as the 1st house. Same planets, houses re-counted from Moon.</figcaption>
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="ni-chart" role="img" aria-label="Chandra Kundli — North Indian Diamond, Moon as 1st house">
+      <rect x="2" y="2" width="396" height="396" fill="#faf6e8" stroke="#8a6f3d" stroke-width="3"/>
+      <line x1="2" y1="2" x2="398" y2="398" stroke="#8a6f3d" stroke-width="2"/>
+      <line x1="398" y1="2" x2="2" y2="398" stroke="#8a6f3d" stroke-width="2"/>
+      <polygon points="200,2 398,200 200,398 2,200" fill="none" stroke="#8a6f3d" stroke-width="2"/>
+
+      <text x="200" y="78" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">6</text>
+      <text x="200" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">च · Mo · CHANDRA</text>
+      <text x="200" y="112" text-anchor="middle" font-size="9" fill="#8a6f3d">कन्या · Virgo</text>
+
+      <text x="100" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">7</text>
+      <text x="100" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">के · Ke</text>
+      <text x="100" y="64" text-anchor="middle" font-size="9" fill="#5a3d1f">तूळ · Libra</text>
+
+      <text x="30" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">8</text>
+      <text x="62" y="120" text-anchor="middle" font-size="9" fill="#8a6f3d">वृश्चिक · Sco</text>
+
+      <text x="100" y="192" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">9</text>
+      <text x="100" y="214" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">र·बु(व)</text>
+      <text x="100" y="228" text-anchor="middle" font-size="9" fill="#5a3d1f">Su·Me(R) · धनू</text>
+
+      <text x="30" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">10</text>
+      <text x="62" y="318" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">शु · Ve</text>
+      <text x="62" y="332" text-anchor="middle" font-size="9" fill="#5a3d1f">मकर · Cap</text>
+
+      <text x="100" y="372" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">11</text>
+      <text x="100" y="388" text-anchor="middle" font-size="9" fill="#8a6f3d">कुंभ · Aqu</text>
+
+      <text x="200" y="298" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">12</text>
+      <text x="200" y="270" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">मं · Ma</text>
+      <text x="200" y="320" text-anchor="middle" font-size="9" fill="#5a3d1f">मीन · Pisces</text>
+
+      <text x="300" y="372" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">1</text>
+      <text x="300" y="350" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">रा(व) · Ra(R)</text>
+      <text x="300" y="388" text-anchor="middle" font-size="9" fill="#5a3d1f">मेष · Aries</text>
+
+      <text x="370" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">2</text>
+      <text x="338" y="318" text-anchor="middle" font-size="9" fill="#8a6f3d">वृषभ · Tau</text>
+
+      <text x="300" y="192" text-anchor="middle" font-size="22" font-weight="bold" fill="#5a3d1f">3</text>
+      <text x="300" y="214" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">श(व) · Sa(R)</text>
+      <text x="300" y="228" text-anchor="middle" font-size="9" fill="#5a3d1f">मिथुन · Gem</text>
+
+      <text x="370" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">4</text>
+      <text x="338" y="118" text-anchor="middle" font-size="9" fill="#8a6f3d">कर्क · Cancer (Lagna)</text>
+
+      <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#5a3d1f">5</text>
+      <text x="300" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">गु · Ju</text>
+      <text x="300" y="64" text-anchor="middle" font-size="9" fill="#5a3d1f">सिंह · Leo</text>
+    </svg>
+  </figure>
+  <p class="chart-caption">House numbers re-counted <em>from Moon</em>: Virgo=1H, Libra=2H, ..., Leo=12H. Planet positions unchanged from D1 — only the house labels rotate. / भाव <em>चंद्रापासून</em> पुनर्मोजले: कन्या=१, तूळ=२, ..., सिंह=१२. ग्रह-स्थाने D1 प्रमाणेच — फक्त भाव-क्रमांक फिरतात.</p>
+
+  <h3>What Chandra Kundli reveals here<span class="mr">चंद्र-कुंडली इथे काय दाखवते</span></h3>
+  <ul>
+    <li><strong>Sun + Mercury (R) in 4th from Moon</strong> — the inner-home / heart-space is lit by intellect and authority; emotional comfort comes through learning, debate, study-rooms. Mercury retrograde here means the mind keeps returning to the same childhood scenes and reprocesses them — classical "research mind" signature when read from Moon.</li>
+    <li><strong>Venus in 5th from Moon</strong> — natural romance/creativity karaka in the joy-house of the mind: poetry, music, aesthetic pursuits, and a tender 5H Capricorn-disciplined love-life. This placement softens the otherwise practical Virgo-Moon temperament.</li>
+    <li><strong>Mars in 7th from Moon</strong> — partnership-house from Moon carries Mars: strong, energetic, sometimes-combative bond with the spouse; this is the chart's main Manglik signature (Mars in 7th from Moon, uncancelled by direct benefic aspect). See ch17 doshas.</li>
+    <li><strong>Rahu (R) in 8th from Moon</strong> — research, unconventional learning, sudden mental shifts, occult/depth-psychology pull. The 8H-from-Moon is Vipareeta-territory for emotional transformation — Rahu here will produce one or two abrupt worldview-reversals in life.</li>
+    <li><strong>Saturn (R) in 10th from Moon</strong> — career, public-image and authority all carry Saturn's gravity from the mind's perspective: slow-built reputation, late-blooming recognition, work that becomes a duty/dharma rather than pleasure. Saturn in 10-from-Moon is a classical "long career, durable name" indicator.</li>
+    <li><strong>Jupiter in 12th from Moon</strong> — Atmakaraka Jupiter blesses the foreign / inner / meditative axis from the Moon's standpoint. Strong inclination toward solitude, study, abroad, contemplative practice; the mind finds Jupiter's grace privately rather than publicly.</li>
+  </ul>
+  <ul class="mr">
+    <li><strong>चंद्रापासून ४थ्यात सूर्य + वक्र-बुध</strong> — मनाचे आंतरिक-घर / हृदय-कक्ष बुद्धी व अधिकाराने उजळलेले; भावनिक स्वस्थता शिक्षण, चर्चा, अभ्यासिकेतून. वक्र-बुध इथे म्हणजे मन तेच बालपणीचे प्रसंग पुन्हा-पुन्हा प्रक्रिया करते — चंद्रापासून वाचताना "संशोधन-मन" चे शास्त्रीय चिन्ह.</li>
+    <li><strong>चंद्रापासून ५व्यात शुक्र</strong> — मनाच्या आनंद-घरात नैसर्गिक प्रेम/सर्जनशीलता-कारक: कविता, संगीत, सौंदर्य-वृत्ती, आणि कोमल मकर-शिस्तीचे प्रेम-जीवन. हे स्थान अन्यथा व्यवहारी कन्या-चंद्र स्वभावाला मऊ करते.</li>
+    <li><strong>चंद्रापासून ७व्यात मंगळ</strong> — चंद्रापासूनच्या भागीदारी-घरात मंगळ: जोडीदाराशी प्रबळ, ऊर्जापूर्ण, कधी-कधी संघर्षशील बंध; कुंडलीचे मुख्य मांगलिक चिन्ह (चंद्रापासून ७व्यात मंगळ, थेट शुभ-दृष्टीने न-रद्द). ch17 दोष पहा.</li>
+    <li><strong>चंद्रापासून ८व्यात वक्र-राहू</strong> — संशोधन, असामान्य शिक्षण, अकस्मात मानसिक वळणे, गूढ/खोल-मानसशास्त्राचे आकर्षण. चंद्रापासूनचा ८वा भाव भावनिक रूपांतरासाठी विपरीत-क्षेत्र — राहू इथे एक-दोन अकस्मात विश्वदृष्टी-उलट-पालट निर्माण करेल.</li>
+    <li><strong>चंद्रापासून १०व्यात वक्र-शनी</strong> — मनाच्या नजरेतून करिअर, सार्वजनिक-प्रतिमा व अधिकार शनीच्या गुरुत्वाखाली: हळू-हळू बांधलेली प्रतिष्ठा, उशिराने मिळणारी मान्यता, कर्तव्य/धर्म बनलेले काम. चंद्रापासून १०व्यात शनी = शास्त्रीय "दीर्घ करिअर, टिकाऊ नाव" चिन्ह.</li>
+    <li><strong>चंद्रापासून १२व्यात गुरू</strong> — आत्मकारक गुरू चंद्राच्या दृष्टिकोनातून परदेश / अंतर्गत / ध्यान-अक्षाला आशीर्वाद देतो. एकांत, अभ्यास, परदेश, चिंतन-वृत्तीचा झुकाव; मन गुरूची कृपा सार्वजनिकरीत्या नव्हे, खाजगीत अनुभवते.</li>
+  </ul>
+
+  <h2>2a.3 Vimshottari Dasha — Master Table<span class="mr">२अ.३ विमशोत्तरी दशा — मुख्य तक्ता</span></h2>
+
+  <p>Birth nakshatra Hasta Pada 1 is ruled by the Moon, so the Mahadasha sequence begins with the <strong>Moon balance</strong>. The unconsumed portion of Hasta at the moment of birth gave a balance of <strong>7 years 7 months 14 days</strong> of Moon MD — covering infancy through the start of school. From there the full 120-year Vimshottari cycle unfolds in its standard order: Mars → Rahu → Jupiter → Saturn → Mercury → Ketu → Venus → Sun → Moon (next cycle). At today's date (May 2026, age 22) the native is roughly 7.8 years into the 18-year <strong>Rahu Mahadasha</strong> — the central career-and-marriage arc of the chart.</p>
+  <p class="mr">जन्म-नक्षत्र हस्त चरण १ चा स्वामी चंद्र असल्याने महादशा-क्रम <strong>चंद्र-शिल्लक</strong> ने सुरू. जन्मक्षणी हस्ताचा शिल्लक भाग <strong>७ वर्षे ७ महिने १४ दिवस</strong> चंद्र-महादशा देतो — बाल्य ते शाळेची सुरुवात. तेथून पुढे पूर्ण १२० वर्षांचे विमशोत्तरी चक्र मानक क्रमाने उलगडते: मंगळ → राहू → गुरू → शनी → बुध → केतू → शुक्र → सूर्य → चंद्र (पुढील चक्र). आजच्या तारखेला (मे २०२६, वय २२) जातक १८-वर्षीय <strong>राहू महादशेच्या</strong> सुमारे ७.८ वर्षांत — कुंडलीच्या मध्यवर्ती करिअर-व-विवाह-कमानीत.</p>
+
+  <table>
+    <tr><th>#</th><th>MD / महादशा</th><th>Years / वर्षे</th><th>Start / सुरुवात</th><th>End / शेवट</th><th>Age band / वय-पट्टा</th><th>Life-stage / जीवन-टप्पा</th></tr>
+    <tr><td>1</td><td>Moon / चंद्र (balance)</td><td>~7.62</td><td>17 Dec 2003 (birth)</td><td>02 Aug 2011</td><td>0 → 7.6</td><td>Infancy + early school / बाल्य + प्राथमिक शाळा</td></tr>
+    <tr><td>2</td><td>Mars / मंगळ</td><td>7</td><td>02 Aug 2011</td><td>02 Aug 2018</td><td>7.6 → 14.6</td><td>School years (yogakaraka activation) / शालेय वर्षे (योगकारक सक्रिय)</td></tr>
+    <tr><td>3</td><td><strong>Rahu / राहू</strong></td><td>18</td><td>02 Aug 2018</td><td>02 Aug 2036</td><td>14.6 → 32.6</td><td><strong>CURRENT — college, early career, marriage years</strong> / <strong>सध्याची — महाविद्यालय, प्रारंभिक करिअर, विवाह-वर्षे</strong></td></tr>
+    <tr><td>4</td><td>Jupiter / गुरु (Atmakaraka)</td><td>16</td><td>02 Aug 2036</td><td>02 Aug 2052</td><td>32.6 → 48.6</td><td>Peak professional life, Sun-Jupiter Parivartana fires globally / व्यवसायाचा शिखर, सूर्य-गुरू परिवर्तन जागतिक</td></tr>
+    <tr><td>5</td><td>Saturn / शनी</td><td>19</td><td>02 Aug 2052</td><td>02 Aug 2071</td><td>48.6 → 67.6</td><td>Late career, structuring, 3rd Sade-Sati overlap / उत्तर-करिअर, रचनाबद्धता, तिसरी साडेसाती</td></tr>
+    <tr><td>6</td><td>Mercury / बुध</td><td>17</td><td>02 Aug 2071</td><td>02 Aug 2088</td><td>67.6 → 84.6</td><td>Teaching, writing, residence changes / अध्यापन, लेखन, निवास-बदल</td></tr>
+    <tr><td>7</td><td>Ketu / केतू</td><td>7</td><td>02 Aug 2088</td><td>02 Aug 2095</td><td>84.6 → 91.6</td><td>Detachment, vanaprastha / अलिप्ती, वानप्रस्थ</td></tr>
+    <tr><td>8</td><td>Venus / शुक्र</td><td>20</td><td>02 Aug 2095</td><td>02 Aug 2115</td><td>91.6 → 111.6</td><td>Late longevity, comfort / दीर्घायुष्य-काल, सुख</td></tr>
+    <tr><td>9</td><td>Sun / सूर्य</td><td>6</td><td>02 Aug 2115</td><td>02 Aug 2121</td><td>111.6 → 117.6</td><td>Extreme longevity (only if Ve-Sa survived) / अति-दीर्घायुष्य (शुक्र-शनी पार पडल्यासच)</td></tr>
+  </table>
+
+  <h2>2a.4 Antardasha breakdown — Rahu MD (CURRENT)<span class="mr">२अ.४ अंतर्दशा-तपशील — राहू महादशा (सध्याची)</span></h2>
+
+  <p>Each MD divides into 9 ADs in the standard Vimshottari order (start at MD planet, then cycle Ke → Ve → Su → Mo → Ma → Ra → Ju → Sa → Me until the MD planet is reached again). AD duration = MD-years × AD-planet-years ÷ 120. For the 18-year Rahu MD, the unit is 18/120 = 0.15 years per Vimshottari-year of the sub-planet. The native is, as of May 2026, in the <strong>Rahu-Saturn</strong> antardasha (the third AD of Rahu MD), which closes mid-July 2026 — at which point the long Rahu-Mercury AD opens and runs until early 2029.</p>
+  <p class="mr">प्रत्येक महादशा ९ अंतर्दशांत विभागली जाते — विमशोत्तरीच्या मानक क्रमाने (महादशा-ग्रहापासून सुरू, मग केतू → शुक्र → सूर्य → चंद्र → मंगळ → राहू → गुरू → शनी → बुध — महादशा-ग्रह पुन्हा येईपर्यंत). अंतर्दशा-कालावधी = महादशा-वर्षे × अंतर्दशा-ग्रहाची वर्षे ÷ १२०. १८-वर्षीय राहू-महादशेसाठी एकक १८/१२० = ०.१५ वर्षे प्रति विमशोत्तरी-वर्ष. मे २०२६ ला जातक <strong>राहू-शनी</strong> अंतर्दशेत (राहू महादशेची तिसरी AD), जुलै २०२६ मध्ये संपते — मग दीर्घ राहू-बुध अंतर्दशा फेब्रुवारी २०२९ पर्यंत.</p>
+
+  <h3>Rahu MD (02 Aug 2018 → 02 Aug 2036) — 9 ADs<span class="mr">राहू महादशा (०२ ऑग २०१८ → ०२ ऑग २०३६) — ९ अंतर्दशा</span></h3>
+  <table>
+    <tr><th>AD / अंतर्दशा</th><th>Years / वर्षे</th><th>Start / सुरुवात</th><th>End / शेवट</th><th>Age / वय</th><th>Status / स्थिती</th></tr>
+    <tr><td>Ra-Ra / राहू-राहू</td><td>2.70</td><td>02 Aug 2018</td><td>14 Apr 2021</td><td>14.6 → 17.3</td><td>Past — Class 10/11 transition / गेली — दहावी/बारावी संक्रमण</td></tr>
+    <tr><td>Ra-Ju / राहू-गुरू</td><td>2.40</td><td>14 Apr 2021</td><td>08 Sep 2023</td><td>17.3 → 19.7</td><td>Past — college start, expansion / गेली — महाविद्यालय सुरू, विस्तार</td></tr>
+    <tr class="pd-current"><td><strong>Ra-Sa / राहू-शनी</strong></td><td><strong>2.85</strong></td><td><strong>08 Sep 2023</strong></td><td><strong>14 Jul 2026</strong></td><td><strong>19.7 → 22.6</strong></td><td><strong>CURRENT — restructuring, discipline-test</strong> / <strong>सध्याची — पुनर्रचना, शिस्त-परीक्षा</strong></td></tr>
+    <tr><td>Ra-Me / राहू-बुध</td><td>2.55</td><td>14 Jul 2026</td><td>01 Feb 2029</td><td>22.6 → 25.1</td><td>Next — communication, Budhaditya 6H activation / पुढची — संवाद, ६व्यातील बुधादित्य सक्रिय</td></tr>
+    <tr><td>Ra-Ke / राहू-केतू</td><td>1.05</td><td>01 Feb 2029</td><td>19 Feb 2030</td><td>25.1 → 26.2</td><td>Property-detachment window (Ketu in 4H) / मालमत्ता-अलिप्ती कक्ष (केतू ४व्यात)</td></tr>
+    <tr><td>Ra-Ve / राहू-शुक्र</td><td>3.00</td><td>19 Feb 2030</td><td>19 Feb 2033</td><td>26.2 → 29.2</td><td>Marriage-window candidate (4L Venus + 7H + Rahu activation) / विवाह-कक्ष उमेदवार</td></tr>
+    <tr><td>Ra-Su / राहू-सूर्य</td><td>0.90</td><td>19 Feb 2033</td><td>13 Jan 2034</td><td>29.2 → 30.1</td><td>2L Sun activation (income, family) / २-स्वामी सूर्य सक्रिय (उत्पन्न, कुटुंब)</td></tr>
+    <tr><td>Ra-Mo / राहू-चंद्र</td><td>1.50</td><td>13 Jan 2034</td><td>13 Jul 2035</td><td>30.1 → 31.6</td><td>Lagna-lord activation (emotional reset) / लग्न-स्वामी सक्रिय (भावनिक नवीकरण)</td></tr>
+    <tr><td>Ra-Ma / राहू-मंगळ</td><td>1.05</td><td>13 Jul 2035</td><td>31 Jul 2036</td><td>31.6 → 32.6</td><td>Closing surge — yogakaraka 5/10L Mars / समारोप-लाट — योगकारक ५/१०-स्वामी मंगळ</td></tr>
+  </table>
+
+  <h2>2a.4a Antardasha breakdown — Jupiter MD (NEXT)<span class="mr">२अ.४अ अंतर्दशा-तपशील — गुरू महादशा (पुढची)</span></h2>
+
+  <p>The 16-year Jupiter MD opens 02 August 2036 (age 32.6). Because Jupiter is the <strong>Atmakaraka</strong> of this chart (highest planet-degree by the Parashari assignment used in the source ParasharPatrika report) and is in <strong>Parivartana</strong> with the Sun across 2H–6H, Jupiter MD is structurally the chart's peak period: every six-year wealth, dharma and 9H teaching-axis fires together. The earliest AD (Ju-Ju from Aug 2036) immediately activates the Parivartana; the marriage-bearing AD inside Jupiter MD is Ju-Venus (Jun 2044 onward) when 4L+11L Venus combines with 9L Jupiter under Atmakaraka authority.</p>
+  <p class="mr">१६-वर्षीय गुरू महादशा ०२ ऑगस्ट २०३६ (वय ३२.६) ला सुरू. गुरू या कुंडलीचा <strong>आत्मकारक</strong> (स्रोत ParasharPatrika अहवालातील पाराशरी पद्धतीनुसार सर्वोच्च-अंशी ग्रह) आणि सूर्याशी २अ-६ भावांत <strong>परिवर्तन</strong>-योगात असल्याने गुरू महादशा हा कुंडलीचा रचनात्मक शिखर-काल: प्रत्येक सहा-वर्षी संपत्ती, धर्म व ९व्यातील शिक्षण-अक्ष एकत्र पेटतो. प्रथम AD (गुरू-गुरू ऑग २०३६ पासून) ताबडतोब परिवर्तन सक्रिय करते; गुरू-महादशेतील विवाह-वाहक AD म्हणजे गुरू-शुक्र (जून २०४४ पुढे) जेव्हा ४/११-स्वामी शुक्र ९-स्वामी गुरूशी आत्मकारक-अधिकाराखाली एकत्र येतो.</p>
+
+  <h3>Jupiter MD (02 Aug 2036 → 02 Aug 2052) — 9 ADs<span class="mr">गुरू महादशा (०२ ऑग २०३६ → ०२ ऑग २०५२) — ९ अंतर्दशा</span></h3>
+  <table>
+    <tr><th>AD / अंतर्दशा</th><th>Years / वर्षे</th><th>Start / सुरुवात</th><th>End / शेवट</th><th>Age / वय</th><th>Theme / थीम</th></tr>
+    <tr><td>Ju-Ju / गुरू-गुरू</td><td>2.133</td><td>02 Aug 2036</td><td>~03 Oct 2038</td><td>32.6 → 34.7</td><td>Atmakaraka self-activation, Parivartana ignition / आत्मकारक स्व-सक्रिय, परिवर्तन-प्रज्वलन</td></tr>
+    <tr><td>Ju-Sa / गुरू-शनी</td><td>2.533</td><td>~03 Oct 2038</td><td>~12 Apr 2041</td><td>34.7 → 37.3</td><td>Disciplined growth, structural commitments / शिस्तबद्ध वाढ, रचनात्मक बांधिलकी</td></tr>
+    <tr><td>Ju-Me / गुरू-बुध</td><td>2.267</td><td>~12 Apr 2041</td><td>~16 Jul 2043</td><td>37.3 → 39.6</td><td>Communication peak, publishing, teaching / संवाद-शिखर, प्रकाशन, अध्यापन</td></tr>
+    <tr><td>Ju-Ke / गुरू-केतू</td><td>0.933</td><td>~16 Jul 2043</td><td>~23 Jun 2044</td><td>39.6 → 40.5</td><td>Brief detachment, review window / पुनरावलोकन-कक्ष, संक्षिप्त अलिप्ती</td></tr>
+    <tr><td><strong>Ju-Ve / गुरू-शुक्र</strong></td><td><strong>2.667</strong></td><td><strong>~23 Jun 2044</strong></td><td><strong>~23 Feb 2047</strong></td><td><strong>40.5 → 43.2</strong></td><td><strong>Marriage / spouse-business peak inside Jupiter MD</strong> / <strong>गुरू-महादशेतील विवाह / जोडीदार-व्यवसाय शिखर</strong></td></tr>
+    <tr><td>Ju-Su / गुरू-सूर्य</td><td>0.800</td><td>~23 Feb 2047</td><td>~21 Dec 2047</td><td>43.2 → 44.0</td><td>Parivartana fires directly (Sun+Jupiter both active) / परिवर्तन थेट पेटते</td></tr>
+    <tr><td>Ju-Mo / गुरू-चंद्र</td><td>1.333</td><td>~21 Dec 2047</td><td>~22 Apr 2049</td><td>44.0 → 45.4</td><td>Lagna-lord with Atmakaraka — emotional fulfilment / लग्न-स्वामी आत्मकारकासह — भावनिक तृप्ती</td></tr>
+    <tr><td>Ju-Ma / गुरू-मंगळ</td><td>0.933</td><td>~22 Apr 2049</td><td>~24 Mar 2050</td><td>45.4 → 46.3</td><td>Yogakaraka with Atmakaraka — career thrust / योगकारक आत्मकारकासह — करिअर-धक्का</td></tr>
+    <tr><td>Ju-Ra / गुरू-राहू</td><td>2.400</td><td>~24 Mar 2050</td><td>02 Aug 2052</td><td>46.3 → 48.6</td><td>Closing — foreign / unconventional crescendo before Saturn MD / समारोप — परदेश / असामान्य उतार-काल</td></tr>
+  </table>
+
+  <p><em>For pratyantardasha (PD) detail inside any AD of Rahu MD see ch21; for the Jupiter MD PD-level walk see ch22. PD-duration = AD-months × PD-planet-years ÷ 120. The book uses the same formula throughout, and every date in later chapters can be re-derived from this single rule.</em></p>
+  <p class="mr"><em>राहू-महादशेतील कोणत्याही AD मधील प्रत्यंतर्दशा (PD) तपशीलासाठी ch21 पहा; गुरू-महादशेतील PD-स्तर वाचनासाठी ch22. प्रत्यंतर्दशा-कालावधी = अंतर्दशा-महिने × प्रत्यंतर्दशा-ग्रहाची वर्षे ÷ १२०. पुस्तकात सर्वत्र हेच सूत्र वापरले — पुढच्या अध्यायांतील प्रत्येक तारीख याच एका नियमातून पुन्हा-काढता येते.</em></p>
+
+  <h2>2a.5 Sade-Sati Phases (from Virgo Moon)<span class="mr">२अ.५ साडेसातीचे टप्पे (कन्या-चंद्रापासून)</span></h2>
+
+  <p>Sade-Sati = the 7.5-year window when transit-Saturn moves through the 12th sign, the natal-Moon sign, and the 2nd sign from natal Moon. For this chart Moon is in <strong>Virgo</strong>, so the three Sade-Sati signs are: <strong>Phase 1 = Saturn in Leo (12th from Virgo)</strong>, <strong>Phase 2 = Saturn in Virgo (over Moon)</strong>, <strong>Phase 3 = Saturn in Libra (2nd from Virgo)</strong>. As of May 2026 Saturn is in Pisces (the 7th sign from Virgo Moon), which is NOT Sade-Sati — the first Sade-Sati of the native's adult life is still about 2 years away. The 2028-2034 window is the chart's first major Saturn ordeal-and-maturation cycle.</p>
+  <p class="mr">साडेसाती = गोचर शनी जन्म-चंद्रापासून १२व्या, १ल्या आणि २र्‍या राशीतून जाणारी ७.५ वर्षांची खिडकी. या कुंडलीसाठी चंद्र <strong>कन्या</strong>राशीत असल्याने तीन साडेसाती-राशी: <strong>टप्पा १ = शनी सिंहात (कन्यापासून १२वी)</strong>, <strong>टप्पा २ = शनी कन्यात (चंद्रावर)</strong>, <strong>टप्पा ३ = शनी तूळेत (कन्यापासून २री)</strong>. मे २०२६ ला शनी मीन-राशीत (कन्या-चंद्रापासून ७वी राशी) — साडेसाती नाही. जातकाच्या प्रौढ-जीवनातील पहिली साडेसाती अजून सुमारे २ वर्षे दूर. २०२८-२०३४ ची खिडकी कुंडलीचे पहिले मोठे शनि-तपस्वी-व-परिपक्वता-चक्र.</p>
+
+  <table>
+    <tr><th>Cycle / चक्र</th><th>Phase 1 (Leo / सिंह)</th><th>Phase 2 (Virgo / कन्या)</th><th>Phase 3 (Libra / तूळ)</th><th>Age / वय</th></tr>
+    <tr><td>1st (early childhood overlap only)</td><td>~Jul 1998 → Apr 2000</td><td>~Apr 2000 → Sep 2002</td><td>~Sep 2002 → Sep 2004</td><td>0 → 0.75</td></tr>
+    <tr><td><strong>2nd / दुसरे — UPCOMING</strong></td><td><strong>~Apr 2028 → Jul 2030</strong></td><td><strong>~Jul 2030 → Oct 2032</strong></td><td><strong>~Oct 2032 → Oct 2034</strong></td><td><strong>24.4 → 30.9</strong></td></tr>
+    <tr><td>3rd / तिसरे</td><td>~May 2057 → Mar 2060</td><td>~Mar 2060 → May 2062</td><td>~May 2062 → May 2064</td><td>53.4 → 60.4</td></tr>
+    <tr><td>4th / चौथे</td><td>~Jun 2086 → Apr 2089</td><td>~Apr 2089 → Jun 2091</td><td>~Jun 2091 → Jun 2093</td><td>82.5 → 89.5</td></tr>
+  </table>
+
+  <p><em>Note: the "2nd cycle" overlaps the tail of Rahu MD (Phase 1 starts inside Rahu MD) and stretches into the opening years of Jupiter MD (Phase 3 ends at age ~30.9 — Jupiter MD begins at ~32.6). The hand-off Rahu → Jupiter happens INSIDE the Sade-Sati window, which is unusual: it means the dasha change and the Saturn-ordeal coincide. Chapter 25 details each phase separately; ch30 discusses the health-overlay; ch28 the marriage-overlay (Phase 2 onset 2030 coincides with the Ra-Venus AD marriage-window).</em></p>
+  <p class="mr"><em>नोंद: "दुसरे चक्र" राहू-महादशेच्या शेपटीला आच्छादते (टप्पा १ राहू MD मध्ये सुरू) आणि गुरू-महादशेच्या सुरुवातीच्या वर्षांत पसरते (टप्पा ३ वय ~३०.९ ला संपतो — गुरू MD ~३२.६ ला सुरू). राहू → गुरू हस्तांतरण साडेसाती-खिडकीत होते, जे असामान्य: दशा-बदल व शनि-तपस्या एकत्र. ch25 प्रत्येक टप्पा स्वतंत्र; ch30 आरोग्य-थर; ch28 विवाह-थर (टप्पा २ ची सुरुवात २०३० राहू-शुक्र AD विवाह-कक्षाशी जुळते).</em></p>
+
+  <h2>2a.6 Yogini Dasha (current sub-system)<span class="mr">२अ.६ योगिनी दशा (सध्याची उप-प्रणाली)</span></h2>
+
+  <p>Yogini dasha is a parallel 36-year cycle used as a corroborator for Vimshottari. The native is in <strong>Sankta (Ulka)</strong> Yogini-dasha 6Y 1M 5D from 21 Jan 2025. Key sub-period markers:</p>
+  <p class="mr">योगिनी दशा ही ३६-वर्षांची समांतर चक्र-प्रणाली — विमशोत्तरीसाठी पुष्टी म्हणून. जातक <strong>संकटा (उल्का)</strong> योगिनी-दशेत ६ वर्षे १ महिना ५ दिवस २१ जाने २०२५ पासून. महत्त्वाची उप-कालखंडे:</p>
+
+  <table>
+    <tr><th>Yogini / योगिनी</th><th>From / पासून</th></tr>
+    <tr><td>Ulka / उल्का</td><td>22 Jan 2026</td></tr>
+    <tr><td>Sidha / सिद्धा</td><td>24 Mar 2027</td></tr>
+    <tr><td>Sankta / संकटा</td><td>22 Mar 2028</td></tr>
+    <tr><td>Mangla / मंगला</td><td>22 Sep 2029</td></tr>
+    <tr><td>Pingla / पिंगळा</td><td>21 Jan 2029</td></tr>
+    <tr><td>Dhanya / धन्या</td><td>27 Jul 2029</td></tr>
+    <tr><td>Bhramri / भ्रामरी</td><td>24 Mar 2030</td></tr>
+    <tr><td>Bhadrika / भद्रिका</td><td>22 Jan 2031</td></tr>
+  </table>
+
+  <h2>2a.7 Reading legend &amp; 3-step guide<span class="mr">२अ.७ चिन्ह-सूची व ३-पायरीची मार्गदर्शिका</span></h2>
+
+  <h3>Planet abbreviations<span class="mr">ग्रह-संक्षेप</span></h3>
+  <div class="glyph-key">
+    <span><strong>Su</strong> · Sun · सूर्य</span>
+    <span><strong>Mo</strong> · Moon · चंद्र</span>
+    <span><strong>Ma</strong> · Mars · मंगळ</span>
+    <span><strong>Me</strong> · Mercury · बुध</span>
+    <span><strong>Ju</strong> · Jupiter · गुरू</span>
+    <span><strong>Ve</strong> · Venus · शुक्र</span>
+    <span><strong>Sa</strong> · Saturn · शनी</span>
+    <span><strong>Ra</strong> · Rahu · राहू</span>
+    <span><strong>Ke</strong> · Ketu · केतू</span>
+    <span><strong>(R) / (व)</strong> · Retrograde · वक्री</span>
+  </div>
+
+  <h3>Sign-house map for Cancer Lagna<span class="mr">कर्क लग्नासाठी राशि-भाव नकाशा</span></h3>
+  <div class="glyph-key">
+    <span><strong>1H</strong> Cancer · कर्क</span>
+    <span><strong>2H</strong> Leo · सिंह · Ju</span>
+    <span><strong>3H</strong> Virgo · कन्या · Mo</span>
+    <span><strong>4H</strong> Libra · तूळ · Ke(R)</span>
+    <span><strong>5H</strong> Scorpio · वृश्चिक</span>
+    <span><strong>6H</strong> Sagittarius · धनू · Su, Me(R)</span>
+    <span><strong>7H</strong> Capricorn · मकर · Ve</span>
+    <span><strong>8H</strong> Aquarius · कुंभ</span>
+    <span><strong>9H</strong> Pisces · मीन · Ma</span>
+    <span><strong>10H</strong> Aries · मेष · Ra(R)</span>
+    <span><strong>11H</strong> Taurus · वृषभ</span>
+    <span><strong>12H</strong> Gemini · मिथुन · Sa(R)</span>
+  </div>
+
+  <div class="callout gold">
+    <div class="label">How to read this chart in 3 steps / ही कुंडली ३ पायऱ्यांत कशी वाचावी</div>
+    <ol>
+      <li><strong>Find the Lagna</strong> (the cell marked LAGNA in red — Cancer). Note its lord (Moon). Note Moon's position (Virgo 3H, Hasta-1). The Lagna lord's house tells you the native's "default action zone" — for Pushkar that is the 3H of communication, courage, siblings, and short-effort.</li>
+      <li><strong>Scan each occupied house</strong>. For every planet, ask three questions: (a) what does this planet signify (Sun = soul/father, Jupiter = wisdom/wealth, Saturn = discipline/lifespan, etc.)? (b) what house does it sit in? (c) what houses does it rule for Cancer Lagna? Multiply the three together — that is the planet's full report. The most loaded houses here are 6H (Sun + Mercury R = Budhaditya in the service-house) and 2H (Jupiter Atmakaraka in Parivartana with 6H Sun).</li>
+      <li><strong>Overlay the current dasha</strong>. Section 2a.4 shows Rahu MD with Rahu-Saturn AD running (until July 2026), then Rahu-Mercury AD (Jul 2026 → Feb 2029). Highlight Rahu (10H Aries), Saturn (12H Gemini retrograde) and the AD planet — their houses, lordships, and aspects shape the next 1-3 years. From mid-2026, attention shifts to Mercury (6H, retrograde, in Jupiter's sign) which lights the Budhaditya cluster.</li>
+    </ol>
+    <ol class="mr">
+      <li><strong>लग्न शोधा</strong> (LAGNA लाल खुणेचे घर — कर्क). त्याचा स्वामी ओळखा (चंद्र). चंद्राची जागा पहा (कन्या ३व्यात, हस्त-१). लग्नेशाचा भाव जातकाचा "मूलभूत कृति-क्षेत्र" सांगतो — पुष्करासाठी तो ३वा (संवाद, धैर्य, भावंडे, अल्प-प्रयत्न).</li>
+      <li><strong>प्रत्येक भरलेले घर पाहा</strong>. प्रत्येक ग्रहासाठी तीन प्रश्न: (अ) हा ग्रह काय दाखवतो (सूर्य = आत्मा/वडील, गुरू = विद्या/धन, शनी = शिस्त/आयुष्य, इ.)? (ब) कोणत्या भावात बसला आहे? (क) कर्क लग्नासाठी कोणत्या भावांचा स्वामी आहे? तिन्ही गुणाकार करा — तो त्या ग्रहाचा पूर्ण अहवाल. इथे सर्वाधिक भारलेली घरे: ६वा (सूर्य + वक्र-बुध = सेवा-घरात बुधादित्य) आणि २रा (गुरू आत्मकारक ६व्या सूर्याशी परिवर्तनात).</li>
+      <li><strong>सध्याची दशा आच्छादित करा</strong>. विभाग २अ.४ राहू महादशा दाखवतो — राहू-शनी अंतर्दशा (जुलै २०२६ पर्यंत), मग राहू-बुध अंतर्दशा (जुलै २०२६ → फेब्रु २०२९). राहू (१०H मेष), शनी (१२H मिथुन वक्री) व अंतर्दशा-ग्रहाला अधोरेखित करा — त्यांचे भाव, स्वामित्व, दृष्ट्या पुढच्या १-३ वर्षांना आकार देतात. २०२६ मध्यापासून लक्ष बुधावर (६H वक्री, गुरूच्या राशीत) — तो बुधादित्य-गुच्छ उजळवतो.</li>
+    </ol>
+  </div>
+
+  <h2>2a.8 How to verify any claim in this book using this page<span class="mr">२अ.८ या पुस्तकातील कोणताही दावा या पानावरून कसा पडताळावा</span></h2>
+  <ul>
+    <li><strong>Claim: "Saturn is 7L+8L for Cancer."</strong> → 2a.1 table: Saturn lordship column reads "7L + 8L — double maraka." ✓</li>
+    <li><strong>Claim: "Rahu MD runs Aug 2018 → Aug 2036."</strong> → 2a.3 master MD-table row 3 reads exactly those dates. ✓</li>
+    <li><strong>Claim: "Ra-Saturn AD ends July 2026."</strong> → 2a.4 Rahu sub-table: Ra-Sa row reads "08 Sep 2023 → 14 Jul 2026" (CURRENT). ✓</li>
+    <li><strong>Claim: "Sade-Sati for this chart starts in 2028, not earlier."</strong> → 2a.5 Sade-Sati table: 2nd cycle Phase 1 row reads "~Apr 2028 → Jul 2030" (Saturn entering Leo, 12th from Virgo Moon). ✓</li>
+    <li><strong>Claim: "Jupiter is Atmakaraka and is in Parivartana with the Sun across 2H–6H."</strong> → 2a.1 table: Jupiter row reads "Leo · 2H · friend's sign · Atmakaraka · Parivartana with Sun"; Sun row reads "Sagittarius · 6H · Sun-Jupiter Parivartana." ✓</li>
+    <li><strong>Claim: "Mars in 9H is yogakaraka (5L+10L) for Cancer Lagna."</strong> → 2a.1 table: Mars row reads "Pisces · 9H · yogakaraka · 5L + 10L." ✓</li>
+  </ul>
+  <ul class="mr">
+    <li><strong>दावा: "कर्कासाठी शनी ७-स्वामी + ८-स्वामी."</strong> → २अ.१ तक्ता: शनीच्या स्वामित्व-स्तंभात "७-स्वामी + ८-स्वामी — दुहेरी मारक." ✓</li>
+    <li><strong>दावा: "राहू महादशा ऑग २०१८ → ऑग २०३६."</strong> → २अ.३ मुख्य MD-तक्ता पंक्ती ३ मध्ये त्याच तारखा. ✓</li>
+    <li><strong>दावा: "राहू-शनी अंतर्दशा जुलै २०२६ ला संपते."</strong> → २अ.४ राहू उप-तक्ता: Ra-Sa पंक्ती "०८ सप्टें २०२३ → १४ जुलै २०२६" (सध्याची). ✓</li>
+    <li><strong>दावा: "या कुंडलीची साडेसाती २०२८ ला सुरू, याआधी नाही."</strong> → २अ.५ साडेसाती तक्ता: दुसर्‍या चक्राच्या पंक्तीत टप्पा १ "~एप्रिल २०२८ → जुलै २०३०" (शनी सिंहात, कन्या-चंद्रापासून १२वी). ✓</li>
+    <li><strong>दावा: "गुरू आत्मकारक आणि सूर्याशी २अ-६ भावांत परिवर्तन-योगात."</strong> → २अ.१ तक्ता: गुरू पंक्ती "सिंह · २वा · मित्र-राशी · आत्मकारक · सूर्याशी परिवर्तन"; सूर्य पंक्ती "धनू · ६वा · सूर्य-गुरू परिवर्तन." ✓</li>
+    <li><strong>दावा: "९व्या मंगळ कर्क लग्नासाठी योगकारक (५-स्वामी+१०-स्वामी)."</strong> → २अ.१ तक्ता: मंगळ पंक्ती "मीन · ९वा · योगकारक · ५-स्वामी + १०-स्वामी." ✓</li>
+  </ul>
+
+  <div class="pager">
+    <a href="ch02-birth-details.html">← Chapter 2</a>
+    <a href="index.html" class="toc-link">Table of Contents</a>
+    <a href="ch03-rashis.html">Chapter 3: Rashis →</a>
+  </div>
+</main>
+</body>
+</html>
